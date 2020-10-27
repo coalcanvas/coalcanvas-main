@@ -38,14 +38,14 @@
 
 @font-face {
 	font-family: 'FreeSans';
-	src: local('FreeSans'), local('FreeSans'), url('../files/FreeSans.otf') format('otf');
+	src: url('.https://github.com/coalcanvas/coalcanvas.github.io/files/FreeSans.otf') format('otf');
 	font-style: normal;
 	font-weight: 400;
 }
 
 @font-face {
 	font-family: 'FreeSans';
-	src: local('FreeSansBold'), local('FreeSansBold'), url('../files/FreeSansBold.otf') format('otf');
+	src: url('https://github.com/coalcanvas/coalcanvas.github.io/files/FreeSansBold.otf') format('otf');
 	font-style: normal;
 	font-weight: 500;
 }
@@ -608,3 +608,6 @@ iframe {
 		padding-left: 0;
 	}
 }
+
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
