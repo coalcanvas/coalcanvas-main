@@ -1,0 +1,29 @@
+{
+  "name": "coalcanvas-app",
+  "version": "1.0.3",
+  "description": "An assets management application.",
+  "author": "Amy <ansb1987@gmail.com>",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/coalcanvas/coalcanvas.github.io.git"
+  },
+  "keywords": [
+    "Greensock",
+    "GSAP",
+    "TweenLite",
+    "TweenMax",
+    "React",
+    "React Native",
+    "plugin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coalcanvas/coalcanvas.github.io/issues"
+  },
+  "homepage": "https://github.com/CuppaCMS/coalcanvas.github.io",
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3"
+  }
+}
