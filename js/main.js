@@ -1,0 +1,1 @@
+gsap.to(".logo", { duration: 3, x: 200, backgroundColor: "#1e2436", borderRadius: "10%", border: "2px solid white", ease: "bounce"});
