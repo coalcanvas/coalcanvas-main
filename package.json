@@ -24,6 +24,7 @@
   "homepage": "https://github.com/coalcanvas/coalcanvas.github.io",
   "dependencies": {
     "expo": "^39.0.4",
+    "horizontal-scroll": "^1.1.0",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3"
