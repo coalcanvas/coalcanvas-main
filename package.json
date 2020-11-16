@@ -21,8 +21,10 @@
   "bugs": {
     "url": "https://github.com/coalcanvas/coalcanvas.github.io/issues"
   },
-  "homepage": "https://github.com/CuppaCMS/coalcanvas.github.io",
+  "homepage": "https://github.com/coalcanvas/coalcanvas.github.io",
   "dependencies": {
+    "expo": "^39.0.4",
+    "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
     "sass-loader": "^9.0.3"
   }
