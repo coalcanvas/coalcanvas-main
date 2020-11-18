@@ -1,144 +1,160 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <title>Minimal Navigation</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="index.css" />
-    </head>
-    <body>
-      <link rel="stylesheet" href="style.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-      <script src="js/main.js"></script>
-      <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Card</title>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Minimal Navigation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-  <section class="panel">
-  <div class="wrapper">
-    <div class="outer-content">
-      <div class="title">
-        <h1> Minimal Navigation</h1>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Card</title>
+  </head>
+
+  <body>
+    <section class="panel">
+      <div class="wrapper">
+        <div class="outer-content">
+          <div class="title">
+            <h1> Minimal Navigation</h1>
+          </div>
         </div>
-    </div>
 
-    <div class="menu-strip">
-      <div class="toggle-btn">
-        <ion-icon name="menu"></ion-icon>
-      </div>
-    </div>
+        <div class="menu-strip">
+          <div class="toggle-btn">
+            <ion-icon name="menu"></ion-icon>
+          </div>
+        </div>
 
-    <div class="menu">
+        <div class="menu">
           <div class="images">
             <a class="bg bg1 hide"></a>
             <a class="bg bg2 hide"></a>
             <a class="bg bg3 hide"></a>
             <a class="bg bg4 hide"></a>
             <a class="bg bg5 hide"></a>
-            </div>
+          </div>
 
-            <div class="nav">
-              <div class="menu">
+          <div class="nav">
+            <div class="menu">
               <ul>
                 <li>
-                        <a id="order">01.</a>
-                        <a id="menu" href="https://coalcanvas.github.io/home/">&nbsp;Home /</a>
-                        <a id="tag">intro</a>
+                  <a id="order">01.</a>
+                  <a id="menu" href="https://coalcanvas.github.io/home/">&nbsp;Home /</a>
+                  <a id="tag">intro</a>
                 </li>
-                  <li>
-                        <a id="order">02.</a>
-                        <a id="menu" href="https://coalcanvas.github.io/publisher-highlights/">&nbsp;Publisher Highlights /</a>
-                        <a id="tag">from top publishers to products of your category.</a>
+                <li>
+                  <a id="order">02.</a>
+                  <a id="menu" href="https://coalcanvas.github.io/publisher-highlights/">&nbsp;Publisher Highlights
+                    /</a>
+                  <a id="tag">from top publishers to products of your category.</a>
                 </li>
 
                 <li>
-                        <a id="order">03.</a>
-                        <a id="menu">&nbsp;Industry Insights /</a>
-                        <a id="tag">highlights of businesses and what they are doing right.</a>
+                  <a id="order">03.</a>
+                  <a id="menu">&nbsp;Industry Insights /</a>
+                  <a id="tag">highlights of businesses and what they are doing right.</a>
                 </li>
 
                 <li>
-                        <a id="order">04.</a>
-                        <a id="menu" href="https://coalcanvas.github.io/bdv-app/">&nbsp;Publisher Big Data Visualization /</a>
-                        <a id="tag">an overview of all our publishers and their stats.</a>
+                  <a id="order">04.</a>
+                  <a id="menu" href="https://coalcanvas.github.io/bdv-app/">&nbsp;Publisher Big Data Visualization /</a>
+                  <a id="tag">an overview of all our publishers and their stats.</a>
                 </li>
 
-            </ul>
+              </ul>
 
-        </div>
+            </div>
 
-    <div class="media">
-    <ul>
-      <li><ion-icon name="logo-facebook"></ion-icon></li>
-              <li><ion-icon name="logo-instagram"></ion-icon></li>
-                      <li> <a href="https://api.whatsapp.com/send?text=YourShareTextHere"><ion-icon name="logo-whatsapp"> </ion-icon></a></li>
-                              <li><ion-icon name="logo-youtube"></ion-icon></li>
-                              </ul>
-                            </section>
+            <div class="media">
+              <ul>
+                <li>
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </li>
+                <li>
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </li>
+                <li> <a href="https://api.whatsapp.com/send?text=YourShareTextHere">
+                    <ion-icon name="logo-whatsapp"> </ion-icon>
+                  </a></li>
+                <li>
+                  <ion-icon name="logo-youtube"></ion-icon>
+                </li>
+              </ul>
+    </section>
 
-                              <script type="text/javascript">
+    <script type="text/javascript">
+      jQuery(function () {
+        $(".menu-item-1").hover(function () {
+          $(".bg1").fadeIn(800);
+        }, function () {
+          $(".bg1").fadeOut(800);
+        })
+        $(".menu-item-2").hover(function () {
+          $(".bg2").fadeIn(800);
+        }, function () {
+          $(".bg2").fadeOut(800);
+        })
+        $(".menu-item-3").hover(function () {
+          $(".bg3").fadeIn(800);
+        }, function () {
+          $(".bg3").fadeOut(800);
+        })
+        $(".menu-item-4").hover(function () {
+          $(".bg4").fadeIn(800);
+        }, function () {
+          $(".bg4").fadeOut(800);
+        })
+        $(".menu-item-5").hover(function () {
+          $(".bg5").fadeIn(800);
+        }, function () {
+          $(".bg5").fadeOut(800);
+        })
+      })
 
-                              jQuery(function() {
-                                $(".menu-item-1").hover(function() {
-                                  $(".bg1").fadeIn(800);
-                                }, function() {
-                                  $(".bg1").fadeOut(800);
-                                })
-                                $(".menu-item-2").hover(function() {
-                                  $(".bg2").fadeIn(800);
-                                }, function() {
-                                  $(".bg2").fadeOut(800);
-                                })
-                                $(".menu-item-3").hover(function() {
-                                  $(".bg3").fadeIn(800);
-                                }, function() {
-                                  $(".bg3").fadeOut(800);
-                                })
-                                $(".menu-item-4").hover(function() {
-                                  $(".bg4").fadeIn(800);
-                                }, function() {
-                                  $(".bg4").fadeOut(800);
-                                })
-                                $(".menu-item-5").hover(function() {
-                                  $(".bg5").fadeIn(800);
-                                }, function() {
-                                  $(".bg5").fadeOut(800);
-                                })
-                              })
+      var t1 = new TimelineMax({
+        paused: true
+      });
 
-                              var t1 = new TimelineMax({paused: true});
+      t1.to(".outer-content .title", 1, {
+        opacity: 0
+      });
 
-                              t1.to(".outer-content .title", 1, {
-                                opacity: 0
-                              });
+      t1.to(".menu", 2, {
+        width: "45%",
+        ease: Expo.easeInOut
+      }, "-=1");
 
-                              t1.to(".menu", 2, {
-                                width: "45%",
-                                ease: Expo.easeInOut
-                              }, "-=1");
+      t1.staggerFrom(".menu ul li", 2, {
+        y: 20,
+        opacity: 0,
+        ease: Expo.easeInOut
+      }, 0.1);
 
-                              t1.staggerFrom(".menu ul li", 2, {y: 20, opacity: 0, ease: Expo.easeInOut}, 0.1);
+      t1.to(".images", 2, {
+        width: "45%",
+        ease: Expo.easeInOut,
+        delay: -2,
+      }, "-=1");
 
-                              t1.to(".images", 2, {
-                                width: "45%",
-                                ease: Expo.easeInOut,
-                                delay: -2,
-                              },"-=1");
+      t1.reverse();
+      $(document).on("click", ".toggle-btn", function () {
+        t1.reversed(!t1.reversed());
+      });
+      $(document).on("click", "#menu", function () {
+        t1.reversed(!t1.reversed());
+      });
+    </script>
 
-                              t1.reverse();
-                              $(document).on("click", ".toggle-btn", function() {
-                                t1.reversed(!t1.reversed());
-                              });
-                              $(document).on("click", "#menu", function() {
-                                t1.reversed(!t1.reversed());
-                              });
+    </div>
+  </body>
 
-</script>
-
-</div>
-    </body>
 </html>
