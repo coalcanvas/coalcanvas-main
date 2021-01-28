@@ -1,34 +1,49 @@
 {
-  "name": "coalcanvas-app",
-  "version": "1.0.3",
-  "description": "An assets management application.",
-  "author": "Amy <ansb1987@gmail.com>",
-  "main": "main.js",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/coalcanvas/coalcanvas.github.io.git"
-  },
-  "keywords": [
-    "Greensock",
-    "GSAP",
-    "TweenLite",
-    "TweenMax",
-    "React",
-    "React Native",
-    "plugin"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/coalcanvas/coalcanvas.github.io/issues"
-  },
-  "homepage": "https://github.com/coalcanvas/coalcanvas.github.io",
-  "dependencies": {
-    "expo": "^39.0.4",
-    "gsap": "npm:@gsap/shockingly@^3.5.1",
-    "horizontal-scroll": "^1.1.0",
-    "node-fetch": "^2.6.1",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^9.0.3",
-    "scrollmagic": "^2.0.8"
-  }
+    "name": "coalcanvas-app",
+    "version": "1.0.3",
+    "description": "Company website with ux simulator.",
+    "author": "Amy <ansb1987@gmail.com>",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/coalcanvas/coalcanvas.github.io.git"
+    },
+    "keywords": [
+        "Greensock",
+        "GSAP",
+        "TweenLite",
+        "TweenMax",
+        "plugin"
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/coalcanvas/coalcanvas.github.io/issues"
+    },
+    "homepage": "https://github.com/coalcanvas/coalcanvas.github.io",
+    "dependencies": {
+        "@11ty/eleventy": "^0.11.1",
+        "aos": "^2.3.4",
+        "bcrypt": "^5.0.0",
+        "browserify": "^17.0.0",
+        "ejs": "^3.1.5",
+        "express": "^4.17.1",
+        "gsap": "npm:@gsap/shockingly@^3.5.1",
+        "horizontal-scroll": "^1.1.0",
+        "node-fetch": "^2.6.1",
+        "node-sass": "^4.14.1",
+        "sass-loader": "^9.0.3",
+        "scrollmagic": "^2.0.8"
+    },
+    "scripts": {
+        "start": "node main.js",
+        "dev": "webpack serve",
+        "build": "webpack",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "validator": "^13.1.17",
+        "webpack": "^4.44.2",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    }
 }
