@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/c9327ae5a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <script type="module" src="./index.js"></script>
+
+    <script src="./views/interactions/SimpleCart.js"></script>
+    <script src="./views/interactions/drawer.js"></script>
+
+    <script>
+        simpleCart({
+            checkout: {
+                type: "PayPal",
+                email: "you@yours.com",
+            },
+        });
+    </script>
+
+    <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Header root (always visible) -->
+    <header id="header_root"></header>
+    <div id="drawer"></div>
+
+    <div id="switch_root" class="d-flex justify-content-center"></div>
+    <!-- Page root (content rendered based on URL) -->
+    <main id="page_root"></main>
+
+    <!-- Footer root (always visible) -->
+    <footer id="footer_root"></footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script defer>
+        window.addEventListener("hashchange", async(e) => {
+            e.preventDefault();
+            document.querySelector("main").scroll({
+                top: 0,
+                left: 0,
+                behavior: "smooth",
+            });
+        });
+    </script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
+
+<!-- window.addEventListener("hashchange", function up() { const mybutton = document.querySelectorAll(".btn, a, .nav-link"); mybutton.onclick = function () { topFunction(); }; function topFunction() { document.body.scrollTop = 0; document.documentElement.scrollTop
+        = 0; document.querySelectorAll( "section, body, html, #page_root" ).scrollY = 0; } }); -->

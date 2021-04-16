@@ -1,0 +1,99 @@
+.jdorsey {
+    background-color: #00acee !important;
+}
+
+.volcano {
+    background-color: #661d1dd3 !important;
+}
+
+.pearl {
+    background-color: rgb(5 44 75) !important;
+    color: #ffffffd3 !important;
+}
+
+.techno {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+    color: #ffffffd3 !important;
+}
+
+.grass {
+    background-color: rgb(9, 63, 21) !important;
+    color: #fff2f2d3 !important;
+}
+
+.taxi {
+    background-color: rgb(231, 198, 50) !important;
+    color: #ffffffd3 !important;
+}
+
+.volcano-text {
+    color: #862626d3 !important;
+}
+
+.bold {
+    font-weight: 600 !important;
+}
+
+.coal-text {
+    color: rgb(68, 68, 67) !important;
+}
+
+.white-text {
+    color: rgb(255, 255, 255) !important;
+}
+
+.blue-text {
+    color: rgb(62, 81, 143) !important;
+}
+
+.ghostwhite-text {
+    color: rgb(240, 240, 240) !important;
+}
+
+p.a {
+    font-style: normal;
+}
+
+.descriptor-text {
+    font-style: italic !important;
+    color: rgb(112, 112, 111) !important;
+    line-height: 0.9em !important;
+    font-size: smaller !important;
+}
+
+p.c {
+    font-style: oblique;
+}
+
+h6 {
+    color: rgb(8, 52, 88) !important;
+}
+
+.black-text {
+    color: rgb(0, 0, 0) !important;
+}
+
+.align-v {
+    vertical-align: middle !important;
+}
+
+.icon-blue-4:hover {
+    color: #3596f1 !important;
+    border: 1px solid #70aad4 !important;
+}
+
+.icon-gold-3:hover {
+    color: #faad14 !important;
+    border: 1px solid #ffe58f !important;
+}
+
+.icon-red-4:hover {
+    color: #ff4d4f !important;
+    border: 1px solid #ff7875 !important;
+}
+
+.icon-gray-9:hover {
+    color: #434343 !important;
+    border: 1px solid #d9d9d9 !important;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: rgb(110, 99, 99);
+        animation: body 1s linear;
+    }
+    
+    .wrapper {
+        width: 500px;
+        height: 600px;
+        margin: auto;
+        background-color: aqua;
+    }
+    
+    .headline {
+        text-align: center;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: calc(5em + 5vw);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+</style>
+
+<body>
+    <h1 class="headline"></h1>
+    <div class="wrapper"></div>
+
+    <script>
+        const app_name = "zyro.com";
+
+        const div = document.querySelectorAll("div");
+        const headline = document.querySelector(".headline");
+        headline.innerHTML = `${app_name}`;
+    </script>
+</body>
+
+</html>

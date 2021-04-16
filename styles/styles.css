@@ -1,0 +1,17 @@
+@import "./modules/normalize.css";
+@import "./modules/base.css";
+@import "./modules/colors.css";
+@import "./modules/contact-form.css";
+@import "./modules/font.css";
+@import "./modules/header.css";
+@import "./modules/animation.css";
+@import "./modules/footer.css";
+@import "./modules/containers.css";
+@import "./modules/drawer.css";
+@import "./modules/background.css";
+@import "./modules/register-form.css";
+@import "./modules/buttons.css";
+@import "./modules/slider.css";
+@import "./modules/content.css";
+@import "./modules/catalog.css";
+@import "./modules/interactive-tiles.css";

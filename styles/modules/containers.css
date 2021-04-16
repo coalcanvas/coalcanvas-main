@@ -1,0 +1,184 @@
+.collie {
+    flex: 33.33%;
+    padding: 5px;
+}
+
+.isomorph-i {
+    -moz-box-shadow: inset 2px 0px 12px #b6b6b6 !important;
+    -webkit-box-shadow: inset 2px 0px 12px #b6b6b6 !important;
+    box-shadow: inset 2px 0px 12px #b6b6b6 !important;
+    -webkit-border-radius: 1px !important;
+    -moz-border-radius: 1px !important;
+    border-radius: 1px !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.rounded-border {
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 12px !important;
+    border-radius: 12px !important;
+}
+
+.isomorph-o {
+    -moz-box-shadow: 4px 0px 24px #b6b6b6 !important;
+    -webkit-box-shadow: 4px 0px 24px #b6b6b6 !important;
+    box-shadow: 4px 0px 24px #b6b6b6 !important;
+    -webkit-border-radius: 12px !important;
+    -moz-border-radius: 12px !important;
+    border-radius: 12px !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.isomorph-o:hover {
+    filter: contrast(65%) !important;
+    transform: scale(1.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.isomorph-i-x {
+    color-interpolation-filters: auto;
+    box-shadow: inset 1px 1px 240px #000000 !important;
+    -moz-box-shadow: inset 2px 0px 240px #000000 !important;
+    -webkit-box-shadow: inset 2px 0px 240px #000000 !important;
+    border-radius: 12px !important;
+    color: ghostwhite !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.isomorph-i-xb-h {
+    -moz-box-shadow: inset 2px 0px 12px #b6b6b6 !important;
+    -webkit-box-shadow: inset 2px 0px 12px #b6b6b6 !important;
+    box-shadow: inset 2px 0px 12px #b6b6b6 !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    width: 100vw;
+    height: auto;
+}
+
+html {
+    overflow-x: hidden !important;
+    transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    margin: 0;
+    padding: 0;
+    font-family: "Marvel", sans-serif;
+    height: 100%;
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-scrolling: touch;
+    -moz-overflow-scrolling: touch;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+    -ms-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+}
+
+body {
+    color: rgba(2, 2, 2, 0.65) !important;
+    height: 100%;
+    font-weight: 300 !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    min-height: 400vh;
+}
+
+@media screen and (max-width: 575px) {
+    main {
+        margin-bottom: 0;
+    }
+}
+
+main {
+    width: 100vw;
+    position: fixed;
+    overflow-x: hidden !important;
+    overflow-y: scroll;
+    margin: auto;
+    margin-top: -3vh;
+    padding: 0;
+    margin-bottom: 7vh;
+    margin-top: 7vh;
+    height: 80vh;
+    padding-bottom: 5vh;
+}
+
+section {
+    height: 200vh;
+    background-color: rgba(210, 218, 221, 0.445);
+    animation: body 1s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+}
+
+@keyframes body {
+    to {
+        background-color: rgb(52, 52, 53);
+        border-radius: 50px;
+        width: 75%;
+        transform: translate(80px);
+        filter: contrast(125%);
+    }
+}
+
+.background {
+    width: 100vw;
+    background-image: url("");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    top: 10vh;
+    margin: auto;
+    position: fixed;
+}
+
+.blur-bg {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.jumbotron {
+    background: transparent;
+}
+
+.emulated-flex-gap>* {
+    margin: 12px 0 0 12px;
+}
+
+.emulated-flex-gap {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: -12px 0 0 -12px;
+    width: calc(100% + 12px);
+}
+
+.grid-container {
+    grid-row-gap: 50px;
+}
+
+.row {
+    row-gap: 1ch;
+    -webkit-row-gap: 1em;
+}
+
+.carousel {
+    width: 200vw !important;
+    margin: auto !important;
+    display: block !important;
+    --gap: 1rem !important;
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    padding-top: 70px;
+    top: 0;
+    margin: 0 16rem 0 16rem;
+}

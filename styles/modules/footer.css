@@ -1,0 +1,27 @@
+footer {
+    text-align: center;
+    position: absolute;
+    bottom: 500vh;
+    width: 100vw;
+    transform: translateY(0%);
+    height: 10vh;
+    left: 0;
+}
+
+footer>p {
+    color: rgb(32, 32, 32);
+    animation: lightbulb 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes lightbulb {
+    to {
+        color: rgb(106, 214, 73);
+    }
+}

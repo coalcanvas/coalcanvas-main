@@ -1,0 +1,26 @@
+//theme switch
+svg {
+    height: 30px;
+    width: 30px;
+    margin: auto;
+    padding: 0;
+    color: black;
+}
+
+#switch_root {
+    position: fixed;
+    right: calc(1.5em + 0.5vw);
+    top: calc(0.5em + 0.1vh);
+    z-index: 5;
+}
+
+#switch {}
+
+.button-wrapper {
+    transform: scale(0.2);
+}
+
+#btn-profiles {
+    top: 25%;
+    position: absolute;
+}

@@ -1,0 +1,331 @@
+.glow {
+    -moz-box-shadow: 8px 0px 48px #b6b6b6 !important;
+    -webkit-box-shadow: 8px 0px 48px #b6b6b6 !important;
+    box-shadow: 8px 0px 48px #b6b6b6 !important;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: all 1.2s cubic-bezier(0.175, 0.885, 0.52, 1.275);
+}
+
+.black-block {
+    padding: 262px 0 112px 0;
+    background: url(../images/black-block-bg.svg) no-repeat center;
+    background-color: white;
+    background-size: contain;
+    transition: 0.5s;
+}
+
+#mackerel {
+    height: 300px;
+    width: 384px;
+    background: url(./styles/images/step-animation-swimming-upstream.png) left center;
+    animation: animateSprite 30s steps(1), swim 30s cubic-bezier(0.175, 0.885, 0.52, 1.275);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    position: absolute;
+    filter: grayscale(100%);
+    filter: blur(8px);
+    filter: drop-shadow(20px 10px 4px #1f1f29a2);
+    opacity: 0.7;
+    right: -200px;
+    top: 50%;
+    margin-top: -150px;
+    z-index: 100;
+}
+
+@keyframes animateSprite {
+    0% {
+        background-position: -1152px;
+        /* Starting position moving left sprite */
+    }
+    20% {
+        background-position: 0px;
+        /* Straight on sprite */
+    }
+    25% {
+        background-position: 25vw;
+        /* Moving up sprite */
+    }
+    35% {
+        background-position: -768px;
+        /* Moving right sprite */
+    }
+    40% {
+        background-position: -768px;
+    }
+    50% {
+        background-position: -384px;
+        /* Moving up sprite */
+    }
+    60% {
+        background-position: -0px;
+        /* Straight on sprite */
+    }
+    67% {
+        background-position: -1152px;
+        /* Moving up sprite */
+    }
+    100% {
+        background-position: -1152px;
+        display: none;
+    }
+}
+
+@keyframes swim {
+    0% {
+        transform: translate(0, 0);
+        /* Starting position */
+    }
+    20% {
+        transform: translate(calc(-50vw - 192px), 0);
+        /* Animate to center of screen */
+    }
+    25% {
+        transform: translate(calc(-50vw - 192px), 0);
+        /* Stay at the center for 1 second */
+    }
+    35% {
+        transform: translate(calc(-50vw - 192px), -20vh);
+        /* Animate up for 2 seconds */
+    }
+    50% {
+        transform: translate(-25vw, 15vh);
+        /* Animate bottom right for 3 seconds */
+    }
+    60% {
+        transform: translate(-25vw, -20vh);
+        /* Animate up at right of the screen */
+    }
+    67% {
+        transform: translate(-25vw, -20vh);
+    }
+    100% {
+        transform: translate(calc(-100vw - 576px), 0);
+        /* Animate past left past the screen */
+        display: none;
+    }
+}
+
+@keyframes dissapear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fall {
+    from {
+        transform: translateY(105%);
+        display: none;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        z-index: 5;
+        transform: translateY(55vh);
+    }
+}
+
+.opening {
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    animation: fall 1s cubic-bezier(0.175, 0.885, 0.52, 1.275);
+    animation-delay: 22s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.ocean {
+    position: absolute;
+    z-index: 1;
+    margin: auto;
+    border-radius: 50px;
+    width: 80vw;
+    height: 80vh;
+    background-image: linear-gradient(0deg, #05090fc4, #102012a9);
+}
+
+.snowflake {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    position: absolute;
+    background-color: linear-gradient(0deg, #230c25b7, rgb(43, 61, 141));
+    bottom: -30px;
+    opacity: 1;
+    animation: snowflake 15s cubic-bezier(0.175, 0.885, 0.52, 1.275) infinite, sideWays 4s cubic-bezier(0.175, 0.885, 0.52, 1.275) infinite alternate;
+}
+
+.snowflake:hover,
+.snowflake:active {
+    animation-play-state: paused;
+    filter: brightness(150%);
+    filter: contrast(150%);
+    transform: scale(0.7);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.52, 1.275);
+}
+
+@keyframes snowflake {
+    0% {
+        transform: translateY(0%);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-120vh);
+    }
+}
+
+@keyframes sideWays {
+    0% {
+        margin-left: 0px;
+    }
+    100% {
+        margin-left: 384px;
+    }
+}
+
+.snowflake--1 {
+    left: 10%;
+    animation-delay: 0.5s;
+    animation-duration: 16s;
+    opacity: 0.4;
+}
+
+.snowflake--2 {
+    width: 15px;
+    height: 15px;
+    left: 40%;
+    animation-delay: 1s;
+    animation-duration: 10s;
+    opacity: 0.5;
+}
+
+.snowflake--3 {
+    width: 10px;
+    height: 10px;
+    left: 30%;
+    animation-delay: 5s;
+    animation-duration: 20s;
+    opacity: 0.5;
+}
+
+.snowflake--4 {
+    width: 25px;
+    height: 25px;
+    left: 40%;
+    animation-delay: 8s;
+    animation-duration: 17s;
+    opacity: 0.4;
+}
+
+.snowflake--5 {
+    width: 30px;
+    height: 30px;
+    left: 60%;
+    animation-delay: 10s;
+    animation-duration: 15s;
+    opacity: 0.1;
+}
+
+.snowflake--6 {
+    width: 10px;
+    height: 10px;
+    left: 80%;
+    animation-delay: 3s;
+    animation-duration: 30s;
+    opacity: 0.4;
+}
+
+.snowflake--7 {
+    width: 15px;
+    height: 15px;
+    left: 90%;
+    animation-delay: -7s;
+    animation-duration: 25s;
+    opacity: 0.5;
+}
+
+.snowflake--9 {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    bottom: 30px;
+    animation-delay: -5s;
+    animation-duration: 19s;
+    opacity: 0.4;
+}
+
+.snowflake--10 {
+    width: 40px;
+    height: 40px;
+    left: 30%;
+    bottom: 30px;
+    animation-delay: -21s;
+    animation-duration: 16s;
+    opacity: 0.5;
+}
+
+.snowflake--11 {
+    width: 30px;
+    height: 30px;
+    left: 60%;
+    bottom: 30px;
+    animation-delay: -13.75s;
+    animation-duration: 20s;
+    opacity: 0.5;
+}
+
+.snowflake--12 {
+    width: 25px;
+    height: 25px;
+    left: 90%;
+    bottom: 30px;
+    animation-delay: -10.5s;
+    animation-duration: 19s;
+    opacity: 0.5;
+}
+
+.snowflake span {
+    display: block;
+    width: 3px;
+    height: 30px;
+    background-color: rgba(174, 241, 66, 0.637);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.snowflake span:before,
+.snowflake span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 20px;
+    background: rgba(159, 241, 66, 0.637);
+}
+
+.snowflake span:before {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    -o-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.snowflake span:after {
+    -webkit-transform: rotate(120deg);
+    -moz-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    transform: rotate(120deg);
+}
