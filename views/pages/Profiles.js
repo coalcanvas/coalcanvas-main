@@ -1,91 +1,86 @@
-//scrollTop onhashchange
-window.addEventListener("load", async function stt(data) {
-  await data;
-  console.log("datatatata", data);
+import { Color } from "../../services/color.js";
 
-  if (resource == "about") {
-    document
-      .querySelector("#about")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  }
-  if (resource == "contact") {
-    document
-      .querySelector("#contact")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  }
-  if (resource == "database") {
-    document
-      .querySelector("#database")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  }
-  if (resource == "items") {
-    document
-      .querySelector("#items")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  } else {
-    console.log(err);
-  }
-});
-
-const ipt = document.querySelector(".input");
-const html = document.querySelector("html");
-
-const btn = document.querySelector("#btn-profiles");
-
-const contents = { pg: 1 };
-
-const baseUrl = "https://reqres.in/api/";
-function loadData() {
-  const para = "users?page=" + contents.pg;
-  const url = baseUrl + para;
+// console.log(Color);
+const id = "1FMn-QLHeogYKnNu4Cqzbjaa2j9Gyq3S20JGcmq2vlW0";
+const url =
+  "https://spreadsheets.google.com/feeds/list/" +
+  id +
+  "/1/public/values?alt=json";
+// console.log(url);
+const questions = [];
+//load url
+loadQuestions();
+function loadQuestions() {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      buildPage(data);
-    }, 1500);
+      data.feed.entry.forEach((el) => {
+        // console.log(el.content["$t"]);
+        for (let key in el) {
+          let holder = [];
+          let temp = [];
+          let mainTemp = {};
+          if (key.substring(0, 3) == "gsx") {
+            let header = key.slice(4); // start from fifth letter in the key e.g. gsx$ slced from gsx$question
+            let val = el[key]["$t"];
+            if (header == "question") {
+              mainTemp.question = val;
+            }
+            if (header == "correct") {
+              mainTemp.correct = val;
+            }
+
+            // console.log(header);
+            // console.log(el[key]["$t"]); //get value of each key
+          }
+          questions.push(mainTemp);
+        }
+      });
+      // document.write(JSON.stringify(data.feed.entry));
+    });
 }
 
-async function buildPage(data) {
-  let output = document.querySelector("#output");
-  output.innerHTML = "";
-  await data.data.forEach((user) => {
-    console.log(user);
-    const html = `${user.first_name} ${user.last_name} ${user.id} <br/> ${user.email}`;
-    const div1 = makeNode(output, "div", html);
-    const img1 = makeNode(output, "img", "");
+// let temp = []
+// el.incorrect.forEach((ans) => {
+//   let tempObj = {
+//     "response": ans,
+//     "correct": false
+//   }
+//   temp.push(tempObj)
+// })
+// let tempObj = {
+//   "response": el.correct,
+//   "correct": true
+// }
+// temp.push(tempObj)
+// // // console.log(temp)
+//           let mainTemp = {
+//             question: el.question,
+//             options: temp,
+//             correct: el.correct,
+//           };
+//           questions.push(mainTemp)
+// add stylesheet
 
-    img1.setAttribute("src", user.avatar);
-    console.log(img1);
-  });
+// Your CSS as text
+var pgStyles = `
+.confirmed {
+  filter: contrast(125%);
+  background-color: #acc29d;
+  color: #5eb95e;
 
-  const div2 = makeNode(output, "div", html);
-
-  for (let i = 0; i < data.total_pages; i++) {
-    const span = makeNode(div2, "span", i + 1);
-    span.classList.add("ind");
-  }
 }
-function makeNode(parent, nodeType, content) {
-  const el = document.createElement(nodeType);
-  parent.append(el);
-  el.innerHTML = content;
-  return parent.appendChild(el);
+.notConfirmed {
+
+  filter:grayscale(25%);
+
 }
+`;
 
-function uniq(a) {
-  var prims = { boolean: {}, number: {}, string: {} },
-    objs = [];
-
-  return a.filter(function (item) {
-    var type = typeof item;
-    if (type in prims)
-      return prims[type].hasOwnProperty(item)
-        ? false
-        : (prims[type][item] = true);
-    else return objs.indexOf(item) >= 0 ? false : objs.push(item);
-  });
-}
-
+var styleSheet = document.createElement("style");
+styleSheet.type = "text/css";
+styleSheet.innerText = pgStyles;
+document.body.appendChild(styleSheet);
 const Profiles = {
   /**
    * Render the page content.
@@ -93,7 +88,7 @@ const Profiles = {
   render: async () => {
     return /*html*/ `
 
-<section onload="scrollTop()" id='profiles' class='col-md-10 col-10 offset-md-1 text-center offset-md-1 offset-1 col-auto col-md-auto'>
+<section scoped onload="scrollTop()" id='profiles' class='col-md-10 col-10 offset-md-1 text-center offset-md-1 offset-1 col-auto col-md-auto'>
   <h4 class="title-tag text-center blur-bg pt-2" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="800">Profiles</h4>
         <hr class='ultralight-border text-center w-25 higher' />
 <div class='contact-form'>  
@@ -110,17 +105,6 @@ const Profiles = {
    * This is a separate call as these can be registered only after the DOM has been painted.
    */
 
-  after_render: async () => {
-    // setInterval(getItems, 2000);
-    const btn = document.querySelector("#btn-profiles");
-
-    btn.addEventListener("click", (e) => {
-      console.log("ready");
-    });
-
-    btn.addEventListener("click", loadData);
-
-    window.addEventListener("DOMContentLoaded", loadData);
-  },
+  after_render: async () => {},
 };
 export default Profiles;

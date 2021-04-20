@@ -9,7 +9,7 @@ import { parseRequestUrl } from "../../services/utils.js";
 const getItem = async (id) => {
   try {
     // Set API url.
-    const apiUrl = `http://143.198.201.63/api/product/${id}`;
+    const apiUrl = `../../database.json`;
     // Create options for the fetch function.
     const options = { cache: "force-cache" };
     // Get a response from the API.

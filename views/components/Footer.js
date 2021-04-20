@@ -4,10 +4,10 @@ const Footer = {
    */
   render: async () => {
     return /*html*/ `
-    <footer class='isomorph-i'>
-          <img width='30vw' height='auto' class='pt-1' src='https://iconape.com/wp-content/png_logo_vector/javascript-logo.png' />
-          <p class="text-center higher pt-1"><em>Custom shop crafted with Vanilla JavaScript.</em></p>  
-      <p class="text-center xlg-text higher "><em id="time"></em></p>  </footer>
+    <footer>
+    <p class="text-center "><em>Crafted with:</em></p>  
+          <img width='25vw' height='auto' class='pt-1' src='https://iconape.com/wp-content/png_logo_vector/javascript-logo.png' />
+      <p class="text-center xlg-text higher pt-1"><em id="time"></em></p>  </footer>
     `;
   },
   /**

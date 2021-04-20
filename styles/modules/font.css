@@ -185,7 +185,7 @@ h5 {
 }
 
 .sub {
-    font-size: calc(0.6em + 1.5vw) !important;
+    font-size: calc(0.6em + 0.3vw) !important;
     margin: auto;
 }
 
@@ -231,11 +231,28 @@ label {
 }
 
 h4,
-.nav-link,
+b,
 label,
+.sub {
+    color: rgb(32, 32, 32);
+}
+
 p,
 i {
-    color: rgb(32, 32, 32);
+    color: #ffffffd3;
+}
+
+a {
+    color: rgb(145, 145, 145);
+}
+
+h4,
+a,
+b,
+p,
+i,
+label,
+.sub {
     animation: lightbulb 1s linear;
     -webkit-animation: lightbulb 1s linear;
     -moz-animation: lightbulb 1s linear;
@@ -251,6 +268,7 @@ i {
     -moz-animation-iteration-count: 1;
     animation-fill-mode: both;
     -webkit-animation-fill-mode: both;
+    filter: contrast(105%);
     -moz-animation-fill-mode: both;
 }
 
@@ -259,3 +277,65 @@ i {
         color: rgb(106, 214, 73);
     }
 }
+
+.to-the-left {
+    animation: ttl 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-animation: ttl 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -moz-animation: ttl 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Pause the animation */
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    filter: contrast(105%);
+    -moz-animation-fill-mode: both;
+    transform: scale(1) translate(0);
+    font-size: 100%;
+}
+
+@keyframes ttl {
+    to {
+        color: rgb(106, 214, 73);
+        transform: translate(-30px);
+        font-size: 70%;
+    }
+}
+
+#Path_1-2,
+#Path_2-2,
+#Path_3-2,
+#Path_4-2,
+#Path_5-2,
+#Path_6-2,
+#Path_7-2,
+#Path_8-2,
+#Path_9-2,
+#Path_10-2,
+#Path_11-2,
+#Path_12-2,
+#Path_13-2,
+#Path_14-2,
+#Path_15-2,
+#Path_16-2,
+#Path_17-2,
+#Path_18-2,
+#Path_19-2,
+#Path_20-2,
+#Path_21-2,
+#Path_22-2,
+#Path_23-2,
+#Path_24-2,
+#Path_25-2,
+#Path_26-2,
+#Path_27-2,
+#Path_28-2,
+#Path_29-2,
+#Path_30-2,
+#Path_31-2 {}

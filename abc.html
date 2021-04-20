@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
 <style>
     body {
@@ -29,18 +32,92 @@
         background-size: calc(5em + 5vw);
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
+    
+    .active {
+        background-color: green;
+    }
 </style>
 
 <body>
     <h1 class="headline"></h1>
-    <div class="wrapper"></div>
+    <div class="wrapper">
+        <div id="ass0" class="bubble active">abcde</div>
+        <div id="ass1" class="bubble">efghi</div>
+        <div id="ass2" class="bubble">jklmn</div>
+        <div id="ass3" class="bubble">opqrs</div>
+    </div>
 
     <script>
-        const app_name = "zyro.com";
+        //setup
+        function load() {
+            const app_name = "zyro.com";
 
-        const div = document.querySelectorAll("div");
-        const headline = document.querySelector(".headline");
-        headline.innerHTML = `${app_name}`;
+            const list = Array.from(document.querySelectorAll("div.bubble"));
+            var active = document.querySelector(".active");
+            const headline = document.querySelector(".headline");
+            headline.innerHTML = `${app_name}`;
+            document.body.classList.add(
+                "d-block",
+                "justify-content-center",
+                "text-center",
+                "m-auto"
+            );
+            const button = document.createElement("button");
+            button.classList.add(
+                "btn",
+                "btn-sm",
+                "btn-success",
+                "d-flex",
+                "m-auto",
+                "t-2"
+            );
+
+            document.body.append(button);
+            button.innerHTML = "çlick me";
+            button.style.marginLeft = "20px";
+            //checking validity
+
+            // handle actions
+            const one = document.querySelector("#ass0");
+            const two = document.querySelector("#ass1");
+            const three = document.querySelector("#ass2");
+            const four = document.querySelector("#ass3");
+
+            button.addEventListener("click", () => {
+                if (one.classList.contains("active")) {
+                    one.classList.remove("active");
+                    two.classList.add("active");
+                    return;
+                }
+                if (two.classList.contains("active")) {
+                    two.classList.remove("active");
+                    three.classList.add("active");
+                    return;
+                }
+                if (three.classList.contains("active")) {
+                    three.classList.remove("active");
+                    four.classList.add("active");
+                    return;
+                }
+                if (four.classList.contains("active")) {
+                    button.innerHTML = `restart?`;
+                    four.classList.remove("active");
+                    one.classList.add("active");
+                    return;
+                }
+            });
+        }
+
+        function reload() {
+            var list = document.querySelectorAll("div.bubble");
+            var active = document.querySelector(".active");
+
+            console.log("r- list", list);
+            console.log("r -length", list.length);
+        }
+
+        //events
+        window.addEventListener("DOMContentLoaded", load, reload);
     </script>
 </body>
 

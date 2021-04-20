@@ -13,8 +13,32 @@
 
 .techno {
     background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
-    color: #ffffffd3 !important;
+    background-image: linear-gradient(147deg, #000000 0%, #000000 74%);
+    color: #ffffffd3;
+    animation: meld 1s linear;
+    -webkit-animation: meld 1s linear;
+    -moz-animation: meld 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+}
+
+@keyframes meld {
+    to {
+        color: rgb(106, 214, 73);
+        background-color: #ffffffd3;
+        background-image: linear-gradient(147deg, #ffffffd3 0%, #000000 74%);
+    }
 }
 
 .grass {

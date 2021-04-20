@@ -10,6 +10,49 @@
     transition: all 1.2s cubic-bezier(0.175, 0.885, 0.52, 1.275);
 }
 
+#background {
+    position: relative;
+    top: 0;
+    left: 0;
+    position: -webkit-sticky;
+    padding: 262px 0 112px 0;
+    background-size: contain;
+    height: 100%;
+    width: 100vw;
+    margin: auto;
+    padding: 0;
+}
+
+svg#interface-bg {
+    transform: translateY(5vh);
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    animation-play-state: running;
+    z-index: 9999;
+}
+
+.move-lower {
+    transform: translateY(20vh);
+}
+
+svg {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+svg#interface-bg:hover {
+    z-index: 5;
+    animation-play-state: paused;
+    cursor: pointer;
+}
+
+g.item {
+    position: fixed;
+    z-index: 999;
+}
+
 .black-block {
     padding: 262px 0 112px 0;
     background: url(../images/black-block-bg.svg) no-repeat center;

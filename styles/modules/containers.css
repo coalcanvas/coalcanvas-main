@@ -28,12 +28,12 @@
     -moz-border-radius: 12px !important;
     border-radius: 12px !important;
     backdrop-filter: blur(8px);
+    filter: contrast(65%) !important;
     -webkit-backdrop-filter: blur(8px);
 }
 
 .isomorph-o:hover {
-    filter: contrast(65%) !important;
-    transform: scale(1.1);
+    filter: contrast(100%) !important;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -112,16 +112,19 @@ main {
 
 section {
     height: 200vh;
-    background-color: rgba(210, 218, 221, 0.445);
+    min-width: 85vw;
+    margin: auto;
+    background-color: transparent;
     animation: body 1s cubic-bezier(0.175, 0.885, 0.32, 1.475);
 }
 
 @keyframes body {
     to {
-        background-color: rgb(52, 52, 53);
+        background-color: rgb(0, 0, 0);
         border-radius: 50px;
-        width: 75%;
-        transform: translate(80px);
+        margin: auto;
+        width: 95%;
+        transform: translate(2vw);
         filter: contrast(125%);
     }
 }
@@ -138,9 +141,24 @@ section {
     position: fixed;
 }
 
+.blur-bg-s {
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    -moz-backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.021);
+    animation: blurp 1s cubic-bezier(0.175, 0.885, 0.32, 1.475);
+}
+
+@keyframes blurp {
+    to {
+        background-color: rgba(0, 0, 0, 0.37);
+    }
+}
+
 .blur-bg {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    -moz-backdrop-filter: blur(12px);
 }
 
 .jumbotron {
@@ -181,4 +199,18 @@ div.sticky {
     padding-top: 70px;
     top: 0;
     margin: 0 16rem 0 16rem;
+}
+
+#about,
+#home {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.card {
+    margin: auto;
+    width: 15vw;
+    height: auto;
+    z-index: 0;
 }

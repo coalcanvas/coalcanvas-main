@@ -28,7 +28,7 @@ const Switch = {
     </g>
   </g>
 </svg>
-<label class='flipper text-muted xlg-text'>ON</label>
+<label class='flipper text-muted lg-text'>🌚</label>
 </div>
     `;
   },
@@ -45,12 +45,12 @@ const Switch = {
       if (elem.getAttribute("dy") === "-8") {
         elem.getAttribute("dy", "-8");
         elem.setAttribute("dy", "11");
-        elemT.textContent = `OFF`;
+        elemT.textContent = `💡`;
         window.scroll({ top: 0, left: 0, behavior: "smooth" });
         // document.body.scrollTop = 0; // For Safari
         // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       } else {
-        elemT.textContent = `ON`;
+        elemT.textContent = `🌚`;
         elem.setAttribute("dy", "-8");
         window.scroll({ top: 2500, left: 0, behavior: "smooth" });
         // window.scrollTo(0, document.body.scrollHeight); // For Safari

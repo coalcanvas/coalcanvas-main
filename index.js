@@ -1,17 +1,16 @@
 // Import pages, components and helper functions.
 import Home from "./views/pages/Home.js";
 import About from "./views/pages/About.js";
-import Database from "./views/pages/Database.js";
+import Cases from "./views/pages/Cases.js";
 import Profiles from "./views/pages/Profiles.js";
 import Profile from "./views/pages/Profile.js";
-import Items from "./views/pages/Items.js";
+import Resources from "./views/pages/Resources.js";
 import ItemShow from "./views/pages/ItemShow.js";
 import Contact from "./views/pages/Contact.js";
 import Error404 from "./views/pages/Error404.js";
 
 import Navbar from "./views/components/Navbar.js";
 import Drawer from "./views/components/Drawer.js";
-import Background from "./views/components/Background.js";
 import Footer from "./views/components/Footer.js";
 import Switch from "./views/components/Switch.js";
 
@@ -21,11 +20,11 @@ import { parseRequestUrl } from "./services/utils.js";
 const routes = {
   "/": Home,
   "/about": About,
-  "/database": Database,
+  "/cases": Cases,
   "/profiles": Profiles,
   "/profiles/:id": Profile,
-  "/items": Items,
-  "/items/:id": ItemShow,
+  "/resources": Resources,
+  "/resources/:id": ItemShow,
   "/contact": Contact,
 };
 
@@ -38,7 +37,6 @@ const router = async () => {
   const header = null || document.getElementById("header_root");
   const drawer = null || document.getElementById("drawer");
   const switcher = null || document.getElementById("switch_root");
-  // const background = null || document.getElementById("background");
   const content = null || document.getElementById("page_root");
   const footer = null || document.getElementById("footer_root");
 
@@ -49,8 +47,6 @@ const router = async () => {
   await Drawer.after_render();
   switcher.innerHTML = await Switch.render();
   await Switch.after_render();
-  // background.innerHTML = await Background.render();
-  // await Background.after_render();
   footer.innerHTML = await Footer.render();
   await Footer.after_render();
 
@@ -74,6 +70,7 @@ const router = async () => {
 /**
  * Add event listeners
  */
+window.addEventListener("DOMContentLoaded", router);
 
 // Listen on hash change.
 window.addEventListener("hashchange", router);

@@ -41,15 +41,15 @@ const Register = {
    */
   render: async () => {
     return /*html*/ `
-     <div id='contact' class="pb-5">
+     <div id='contact' class="container-fluid pb-5">
       <section class=' col-md-10 col-12 offset-md-1 mt-2'>
-        <h4 class="title-tag text-center blur-bg pt-2" data-aos-offset="50" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="800">Contact Form</h4>
+        <h4 class="title-tag text-center blur-bg pt-2" data-aos-offset="50" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="800">Contact 📧</h4>
         <hr class='ultralight-border text-center w-25 higher' />
 
         <p class="sub text-center blur-bg mb-3">Fill in your details below, and we will get back to you <span class='font-weight-bold'>via email within 1-24 hours / one business day</span>.</p>
  
-          <div class="container-fluid " data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="800">
-        <div class="box col-auto col-md-auto col-12 col-md-8 offset-md-2 isomorph-o p-4">
+          <div class="box " data-aos="fade-right" data-aos-easing="ease-in-sine" data-aos-duration="800">
+        <div class="col-auto col-md-auto col-12 col-md-10 offset-md-1 isomorph-o p-4">
 <form id='contact-form' method="post" action="...">
     <div class="form-group">
         <label for="username" class='small-text'>Username</label>

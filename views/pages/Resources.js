@@ -1,32 +1,3 @@
-//scrollTop onhashchange
-window.addEventListener("load", async function stt(data) {
-  await data;
-  console.log("datatatata", data);
-
-  if (resource == "about") {
-    document
-      .querySelector("#about")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  }
-  if (resource == "contact") {
-    document
-      .querySelector("#contact")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  }
-  if (resource == "database") {
-    document
-      .querySelector("#database")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  }
-  if (resource == "items") {
-    document
-      .querySelector("#items")
-      .scroll({ top: 0, left: 0, behavior: "smooth" });
-  } else {
-    console.log(err);
-  }
-});
-
 /**
  * Fetch data from external API.
  * @return {Array} Data fetched.
@@ -34,7 +5,7 @@ window.addEventListener("load", async function stt(data) {
 const getItems = async () => {
   try {
     // Set API url.
-    const apiUrl = `http://143.198.201.63/api/products/100`;
+    const apiUrl = `../../database.json`;
     // Create options for the fetch function.
     const options = { cache: "force-cache" };
     // Get a response from the API.
@@ -51,20 +22,21 @@ const getItems = async () => {
   }
 };
 
-const Items = {
+const Resources = {
   /**
    * Render the page content.
    */
   render: async () => {
     // Get items data.
-    const items = await getItems();
+    const resources = await getItems();
+    console.log(resources.product[0]);
     // Map over items and build card components.
-    const itemList = items
+    const resourceList = resources
       .map(
         ({ title, description, images, price, slug, quantity }) => /*html*/ `
         <div class="container-fluid col-lg-3 col-md-4 col-sm-6 col-auto col-md-auto">
           <div class="card simpleCart_shelfItem mb-3" style="width: 13rem;">
-            <a href="/#/items/${slug}">
+            <a href="/#/resources/${slug}">
               <img src=${images[0].url} class="card-img-top" alt=${slug}>
             </a>
             <div class="card-body">
@@ -84,7 +56,7 @@ const Items = {
         <hr class='ultralight-border text-center w-25 higher' />
  <div class="showreel">
         <div class="row m-5 ">
-          ${itemList}
+          ${resourceList}
         </div>
         </div>
 
@@ -182,4 +154,4 @@ const Items = {
   },
 };
 
-export default Items;
+export default Resources;
