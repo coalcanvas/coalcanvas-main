@@ -342,14 +342,12 @@ const Home = {
     </g>
     </g>
     </svg> 
-        <div class='perspective-card-wrap'>
-    <div id='ass0' class='perspective-card bubble active'><span class='blur-bg move-lower perspective-card__content card'>Are you on a mission to revolutionize your org's UI 🤔?</span>
+    <div id='ass0' class=' bubble active'><span class='blur-bg move-lower card'>Are you on a mission to revolutionize your org's UI 🤔?</span>
     </div>
 
-    <div id='ass1' class='perspective-card bubble'><span class='blur-bg move-lower perspective-card__content card'>...and you're thinking to yourself...not those round borders again 🤭?</span></div>
-    <div id='ass2' class='perspective-card bubble '><span class='blur-bg move-lower perspective-card__content card'>If I've read your mind, then...</span></div>
-    <div id='ass3' class='perspective-card bubble '>This.</div>
-    </div>
+    <div id='ass1' class=' bubble'><span class='blur-bg move-lower card'>...and you're thinking to yourself...not those round borders again 🤭?</span></div>
+    <div id='ass2' class=' bubble '><span class='blur-bg move-lower card'>If I've read your mind, then...</span></div>
+    <div id='ass3' class=' bubble '>This.</div>
   </div></section>
     `;
   },
