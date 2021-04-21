@@ -14,7 +14,7 @@ How flexible is the Javascript language? We're here to find out.
 0 frameworks or libraries certainly has its appeal... 
 ○ Although `interesting` すばらしいですね? modules/utils are added as and when, especially involving complex calc(). 
 
-🧞‍ MOTIVATION 三 | THREE : 'flexible' tapestry in the form of a Single Page Application (SPA) 🧞‍
+🧞‍ MOTIVATION 三 | THREE ✨✨✨: 'flexible' tapestry in the form of a Single Page Application (SPA) 🧞‍
 ○ Single page application to...
 
 #justpurejs ~ [Mateusz Pyzowski](https://github.com/managervcf/vanilla-js-single-page-app) 😎
