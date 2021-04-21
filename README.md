@@ -5,14 +5,14 @@
 
 🧞‍ 🚩 MOTIVATION ワン | ONE ✨
 How flexible is the Javascript language? We're here to find out. 
-○ Is attempting to create a source lib of relay mechanism, grabbing  ლ(•ω •ლ)  people's ლ(•ω •ლ)  attention away from social media (where's the superscript when you need it?).   
+○ To create a source lib of relay mechanism, grabbing  ლ(•ω •ლ)  people's ლ(•ω •ლ)  attention away from social media (where's the superscript when you need it?).   
 
 🧞‍ 🚩 MOTIVATION 二 | TWO ✨✨
 0 frameworks or libraries certainly have its appeal... 
 ○ Although `interesting` すばらしいですね? modules/utils are added as and when, especially involving complex calc(). 
 
 🧞‍ MOTIVATION 三 | THREE : 'flexible' tapestry in the form of a Single Page Application (SPA) 🧞‍
-○ Leveraging its 0 frameworks or libraries appeal (although `interesting` modules are added in as support). 
+○ Single page application to...
 
 #justpurejs ~ [Mateusz Pyzowski](https://github.com/managervcf/vanilla-js-single-page-app) 😎
 
