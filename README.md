@@ -1,10 +1,12 @@
 ## 🧞‍ VJS ≡ SPA ✨
 
 🧞‍ 🚩 GOAL: to play host to a compendium of UX / UI Research & Use Cases ✨✨  
+
 👀 discovered      ○   ⚗️ experimented with    ○     💰 used in a commercial capacity (consented)
 
 🧞‍ 🚩 MOTIVATION ワン | ONE ✨
 How flexible is the Javascript language? We're here to find out. 
+
 ○ To create a source lib of relay mechanism, grabbing  ლ(•ω •ლ)  people's ლ(•ω •ლ)  attention away from social media (where's the superscript when you need it?).   
 
 🧞‍ 🚩 MOTIVATION 二 | TWO ✨✨
