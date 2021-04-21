@@ -11,7 +11,7 @@ How flexible is the Javascript language? We're here to find out.
 ○ Possibly to create a source lib of relay mechanism, grabbing  ლ(•ω •ლ)  people's ლ(•ω •ლ)  attention away from social media (where's the superscript when you need it?).   
 
 🧞‍ 🚩 MOTIVATION 二 | TWO ✨✨
-0 frameworks or libraries certainly has its appeal... 
+0 frameworks | libraries certainly has its appeal... 
 ○ Although `interesting` すばらしいですね? modules/utils are added as and when, especially involving complex calc(). 
 
 🧞‍ MOTIVATION 三 | THREE ✨✨✨: 'flexible' tapestry in the form of a Single Page Application (SPA) 🧞‍
