@@ -1,7 +1,7 @@
 ## 🧞‍ VJS ≡ SPA ✨
 
-🧞‍ 🚩 GOAL: to play around until I figure out an awesome set of UX/UI collection (as I am still a n00b at this) ✨✨  
-Exploring the theme of nostalgic games. 
+🧞‍ 🚩 GOAL: to play around until I figure out an awesome set of UX/UI collection   ✨✨  
+
 
 👀 discovered      ○   ⚗️ experimented with    ○     💰 used in a commercial capacity (consented)
 
