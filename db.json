@@ -1,91 +1,58 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "http://example.com/root.json",
-    "type": "object",
-    "title": "The Root Schema",
-    "description": "The root schema is the schema that comprises the entire JSON document.",
-    "default": {},
-    "required": ["checked", "dimensions", "id", "name", "price", "tags"],
-    "properties": {
-        "checked": {
-            "$id": "#/properties/checked",
-            "type": "boolean",
-            "title": "The Checked Schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": false,
-            "examples": [false]
+    "posts": [{
+            "id": 1,
+            "title": "json-server",
+            "author": "typicode"
         },
-        "dimensions": {
-            "$id": "#/properties/dimensions",
-            "type": "object",
-            "title": "The Dimensions Schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": {},
-            "examples": [{
-                "height": 10.0,
-                "width": 5.0
-            }],
-            "required": ["width", "height"],
-            "properties": {
-                "width": {
-                    "$id": "#/properties/dimensions/properties/width",
-                    "type": "integer",
-                    "title": "The Width Schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [5]
-                },
-                "height": {
-                    "$id": "#/properties/dimensions/properties/height",
-                    "type": "integer",
-                    "title": "The Height Schema",
-                    "description": "An explanation about the purpose of this instance.",
-                    "default": 0,
-                    "examples": [10]
-                }
-            }
-        },
-        "id": {
-            "$id": "#/properties/id",
-            "type": "integer",
-            "title": "The Id Schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [1]
-        },
-        "name": {
-            "$id": "#/properties/name",
-            "type": "string",
-            "title": "The Name Schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": "",
-            "examples": ["A green door"]
-        },
-        "price": {
-            "$id": "#/properties/price",
-            "type": "number",
-            "title": "The Price Schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": 0,
-            "examples": [12.5]
-        },
-        "tags": {
-            "$id": "#/properties/tags",
-            "type": "array",
-            "title": "The Tags Schema",
-            "description": "An explanation about the purpose of this instance.",
-            "default": [],
-            "examples": [
-                ["home", "green"]
-            ],
-            "items": {
-                "$id": "#/properties/tags/items",
-                "type": "string",
-                "title": "The Items Schema",
-                "description": "An explanation about the purpose of this instance.",
-                "default": "",
-                "examples": ["home", "green"]
-            }
+        {
+            "id": 2,
+            "title": "json",
+            "author": "typicode"
         }
-    }
+    ],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profiles": [{
+            "id": 1,
+            "username": "typicode",
+            "email": "ansb1987@gmail.com",
+            "password": "ansb_1987",
+            "confirm_password": "ansb_1987",
+            "img": [
+                "https://raw.githubusercontent.com/coalcanvas/coalcanvas.github.io/4ebb039e0eef6a50c43c940645f7424aab752e39/styles/gallery/swimming-upstream-logo.svg",
+                ""
+            ]
+        },
+        {
+            "username": "admin",
+            "email": "ansb1987@gmail.com",
+            "password": "abc123",
+            "confirm_password": "abc123",
+            "id": 2,
+            "img": [
+                "https://raw.githubusercontent.com/coalcanvas/coalcanvas.github.io/4ebb039e0eef6a50c43c940645f7424aab752e39/styles/gallery/swimming-upstream-logo.svg",
+                ""
+            ]
+        },
+        {
+            "username": "admin",
+            "email": "ansb1987@gmail.com",
+            "password": "sa",
+            "confirm_password": "as",
+            "id": 3,
+            "img": [
+                "https://raw.githubusercontent.com/coalcanvas/coalcanvas.github.io/4ebb039e0eef6a50c43c940645f7424aab752e39/styles/gallery/swimming-upstream-logo.svg",
+                ""
+            ]
+        }
+    ],
+    "config": [{
+        "id": 0,
+        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbxMutjdCIYw3l-J_Al0Zs7ugV7vW5ZDwFrhcLqHUdfOYz52Zw7RgZwqaHIfe-yZ-8uOWQ",
+        "APPSCRIPT_WEB_URL": "https://script.google.com/macros/s/AKfycbx0ij_TjIIRFm39kGlfVRcobSGYI8tXRNPEGdaUVoyZJmJUKEYsglqO5C1Dx7nKESwUVA/exec",
+        "APPSCRIPT_LIB_URL": "https://script.google.com/macros/library/d/1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F/1"
+    }]
 }

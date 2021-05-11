@@ -15,7 +15,6 @@ export const parseRequestUrl = () => {
     id: params[1] || null,
     verb: params[2] || null,
   };
-  // scrollTop onhashchange
 
   // Print it in the console.
   console.log("(App) Parsed url:", request);

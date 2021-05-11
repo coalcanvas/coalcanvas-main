@@ -13,7 +13,6 @@
 
 .techno {
     background-color: #000000;
-    background-image: linear-gradient(147deg, #000000 0%, #000000 74%);
     color: #ffffffd3;
     animation: meld 1s linear;
     -webkit-animation: meld 1s linear;
@@ -37,7 +36,6 @@
     to {
         color: rgb(106, 214, 73);
         background-color: #ffffffd3;
-        background-image: linear-gradient(147deg, #ffffffd3 0%, #000000 74%);
     }
 }
 

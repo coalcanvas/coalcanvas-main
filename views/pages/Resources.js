@@ -5,7 +5,7 @@
 const getItems = async () => {
   try {
     // Set API url.
-    const apiUrl = `../../database.json`;
+    const apiUrl = `http://localhost:3000/profiles`;
     // Create options for the fetch function.
     const options = { cache: "force-cache" };
     // Get a response from the API.
@@ -29,19 +29,20 @@ const Resources = {
   render: async () => {
     // Get items data.
     const resources = await getItems();
-    console.log(resources.product[0]);
+    console.log(resources);
+
     // Map over items and build card components.
     const resourceList = resources
       .map(
-        ({ title, description, images, price, slug, quantity }) => /*html*/ `
+        ({ username, email, password, img }) => /*html*/ `
         <div class="container-fluid col-lg-3 col-md-4 col-sm-6 col-auto col-md-auto">
           <div class="card simpleCart_shelfItem mb-3" style="width: 13rem;">
-            <a href="/#/resources/${slug}">
-              <img src=${images[0].url} class="card-img-top" alt=${slug}>
+            <a href="/#/resources/${username}">
+              <img src=${img[0]} class="card-img-top" alt=${username}>
             </a>
             <div class="card-body">
-              <h5 class="card-title item_name font-weight-bold">${title}</h5>
-              <h5 class="card-title">$ ${price.toFixed(2)}</h5>
+              <h5 class="card-title item_name font-weight-bold">${username}</h5>
+              <h5 class="card-title">$  </h5>
               <a class="item_add"  data-drawer-trigger aria-controls="drawer-name" aria-expanded="false" href="javascript:;"> Add to Cart </a>
             </div>
           </div>

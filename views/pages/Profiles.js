@@ -1,6 +1,3 @@
-import { Color } from "../../services/color.js";
-
-// console.log(Color);
 const id = "1FMn-QLHeogYKnNu4Cqzbjaa2j9Gyq3S20JGcmq2vlW0";
 const url =
   "https://spreadsheets.google.com/feeds/list/" +
@@ -14,8 +11,9 @@ function loadQuestions() {
   fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      data.feed.entry.forEach((el) => {
-        // console.log(el.content["$t"]);
+      // console.log(data.feed.author);
+      data.feed.author.forEach((el) => {
+        console.log(el);
         for (let key in el) {
           let holder = [];
           let temp = [];

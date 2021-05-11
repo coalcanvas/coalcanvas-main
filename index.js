@@ -64,13 +64,10 @@ const router = async () => {
   await page.after_render();
 };
 
-/********* profiles section */
-
-/********* profiles section */
 /**
  * Add event listeners
  */
-window.addEventListener("DOMContentLoaded", router);
+// window.addEventListener("DOMContentLoaded", router);
 
 // Listen on hash change.
 window.addEventListener("hashchange", router);
