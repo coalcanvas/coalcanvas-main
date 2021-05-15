@@ -51,8 +51,19 @@
     ],
     "config": [{
         "id": 0,
-        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbxMutjdCIYw3l-J_Al0Zs7ugV7vW5ZDwFrhcLqHUdfOYz52Zw7RgZwqaHIfe-yZ-8uOWQ",
-        "APPSCRIPT_WEB_URL": "https://script.google.com/macros/s/AKfycbx0ij_TjIIRFm39kGlfVRcobSGYI8tXRNPEGdaUVoyZJmJUKEYsglqO5C1Dx7nKESwUVA/exec",
-        "APPSCRIPT_LIB_URL": "https://script.google.com/macros/library/d/1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F/1"
+        "APPSCRIPT_SCRIPT_ID": "1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F",
+        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbwIjsRE9b_baenoJvZGCKcgzroThiAHHJMm29p_DLITZLtOMIqWExOK1eJmcbBFfLwK",
+        "APPSCRIPT_LIB_URL": "https://script.google.com/macros/library/d/1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F/10",
+        "headers": {
+            "Content-Type": "application/json",
+            "email": "",
+            "username": "",
+            "address ": "",
+            "currentPassword": "",
+            "oldPassword": "",
+            "age ": "",
+            "message": "",
+            "newsletter": ""
+        }
     }]
 }

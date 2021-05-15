@@ -16,6 +16,27 @@
     transform: translateY(-20px);
 }
 
+@keyframes errinout {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+        background-color: transparent;
+        visibility: hidden;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+        background-color: salmon;
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(-20px);
+        opacity: 0;
+        background-color: transparent;
+        visibility: hidden;
+    }
+}
+
 .ind {
     padding: 10px;
     width: 50px;
