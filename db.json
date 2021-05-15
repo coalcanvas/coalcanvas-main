@@ -52,7 +52,7 @@
     "config": [{
         "id": 0,
         "APPSCRIPT_SCRIPT_ID": "1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F",
-        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbwIjsRE9b_baenoJvZGCKcgzroThiAHHJMm29p_DLITZLtOMIqWExOK1eJmcbBFfLwK",
+        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbxa4KVvKoSNvYOf3Eam0_Y_-yOZslo-z5R6V9vRlCHttJBIY2OBT4sqWFsbKybAYyh_",
         "APPSCRIPT_LIB_URL": "https://script.google.com/macros/library/d/1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F/10",
         "headers": {
             "Content-Type": "application/json",
