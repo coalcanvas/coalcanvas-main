@@ -72,7 +72,7 @@ const Contact = {
         <input type="range" class="form-control-range range" id="age" name="age" min="13" max="100">
         <output class="age-bubble" />
     </div>
-        <textarea type='text' class='xsmall-text text-muted' placeholder='*your message here...' name="message" id="message" form="contact-form" required></textarea> 
+        <textarea type='text' class='w-75 xsmall-text text-muted' placeholder='*your message here...' name="message" id="message" form="contact-form" required></textarea> 
             <small class="form-text text-muted xsmall-text">
            *required fields. <br/>
            our e-mail service provider: <br/>
@@ -294,6 +294,9 @@ signup for newsletters/updates?</label> </div>
 
       if (newsletter.checked === true) {
         newsletter.checked === false;
+        newsletter.value = "on";
+      }
+      if (newsletter.value === "") {
         newsletter.value = "on";
       } else if (newsletter.checked === false) {
         newsletter.checked === true;
