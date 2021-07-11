@@ -51,8 +51,8 @@
     ],
     "config": [{
         "id": 0,
-        "APPSCRIPT_SCRIPT_ID": "1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F",
-        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbwIdsE5lsrQcs_-zgqQSPDLviIZ-Olmdu4WSfXipfccFdc65oHPg9gfIGBlxq5X64rd",
+        "APPSCRIPT_SCRIPT_ID": "https://script.google.com/macros/s/AKfycbx3xweC-zyC75-fvDGgXskgVupJwl2KpuATQfcfLcdjFSnI9GJ4DrjGlMkSYeNCn1Ox/exec",
+        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbx3xweC-zyC75-fvDGgXskgVupJwl2KpuATQfcfLcdjFSnI9GJ4DrjGlMkSYeNCn1Ox",
         "APPSCRIPT_LIB_URL": "https://script.google.com/macros/library/d/1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F/10",
         "headers": {
             "Content-Type": "application/json",
