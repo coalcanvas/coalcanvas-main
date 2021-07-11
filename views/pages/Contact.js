@@ -6,7 +6,7 @@
 const getItems = async () => {
   try {
     // Set API url.
-    const apiUrl = `http://localhost:3000/config`;
+    const apiUrl = `https://raw.githubusercontent.com/coalcanvas/coalcanvas.github.io/gh-pages/db.json`; //http://localhost:3000/config
     // Create options for the fetch function.
     const options = { cache: "no-cache" };
     // Get a response from the API.
@@ -138,8 +138,8 @@ signup for newsletters/updates?</label> </div>
     const confirm_password = document.querySelector("#password");
     const prefix = "https://script.google.com/macros/s/";
     const suffix = "/exec";
-    const url = prefix + config[0].APPSCRIPT_DEPLOYMENT_ID + suffix;
-    const headers = config[0].headers;
+    const url = prefix + config.config[0].APPSCRIPT_DEPLOYMENT_ID + suffix;
+    const headers = config.config[0].headers;
     console.log(url);
     // console.log(newsletter.value);
 
