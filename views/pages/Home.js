@@ -342,7 +342,7 @@ const Home = {
     </g>
     </g>
     </svg> 
-    <div id='ass0' class=' bubble active'><span class='blur-bg move-lower card'>Are you on a mission to revolutionize your org's UI 🤔?</span>
+    <div id='ass0' class=' bubble active move-lower home-title isomorph-o col-auto col-md-auto'> 
     </div>
 
     <div id='ass1' class=' bubble'><span class='blur-bg move-lower card'>...and you're thinking to yourself...not those round borders again 🤭?</span></div>

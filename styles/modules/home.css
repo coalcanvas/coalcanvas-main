@@ -38,12 +38,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    height: 400px;
-    width: 100%;
+    width: 80%;
 }
 
 #ass0 {
-    background-image: url("https://images.pexels.com/photos/2777898/pexels-photo-2777898.jpeg");
+    background-image: url("../gallery/coalcanvasO2.gif");
+    height: 1.2em;
 }
 
 #ass1 {
@@ -63,4 +63,10 @@
 .active {
     opacity: 1;
     display: block;
+}
+
+.home-title {
+    vertical-align: middle;
+    font-size: 3.5em;
+    font-weight: 200;
 }
