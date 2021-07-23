@@ -44,22 +44,17 @@ const Contact = {
     <div class="form-group">
         <label for="username" class='small-text'>Username</label>
         <input type="text" class="form-control shorter xsmall-text text-muted" id="username" name="username" autofocus 
-               placeholder="how may we address you?" value="" required/>
+               placeholder="insert username" value="" required/>
     </div>
     <div class="form-group">
         <label for="email" class='small-text'>*e-mail</label>
         <input type="text" class="form-control shorter xsmall-text text-muted" id="email" name="email"
-               placeholder="email address" value="" required>
-    </div>
-        <div class="form-group">
-        <label for="address" class='small-text'>Home address</label>
-        <input type="address" class="form-control shorter xsmall-text text-muted" id="address" name="address"
-               placeholder="home address" value="" >
+               placeholder="insert email" value="" required>
     </div>
      <div class="form-group">
         <label for="password" class='small-text'>Password</label>
         <input type="password" class="form-control shorter xsmall-text text-muted" id="current-password" name="currentPassword" 
-          placeholder="insert your password to auto-create account">
+          placeholder="*for exclusive member profiles">
     </div>
         <div class="form-group">
         <label for="password" class='small-text'>Confirm password</label>
@@ -67,11 +62,6 @@ const Contact = {
           placeholder="confirm your password">
     </div>
 
-    <div class="form-group range-wrap small-text">
-        <label for="age" class='small-text'>Age <span class='xsmall-text text-black font-italic'>so that we may better address you.</span></label>
-        <input type="range" class="form-control-range range" id="age" name="age" min="13" max="100">
-        <output class="age-bubble" />
-    </div>
         <textarea type='text' class='w-75 xsmall-text text-muted' placeholder='*your message here...' name="message" id="message" form="contact-form" required></textarea> 
             <small class="form-text text-muted xsmall-text">
            *required fields. <br/>
@@ -86,7 +76,7 @@ const Contact = {
         <label class="form-check-label xsmall-text" for="newsletter">
 signup for newsletters/updates?</label> </div>
 
-    <input id='btn'  type="submit" class="btn btn-sm isomorph-o pearl d-flex offset-md-6 offset-5"></input>
+    <input id='btn'  type="submit" class="btn btn-sm isomorph-o nature d-flex offset-md-6 offset-5"></input>
 </form>
         </div>
     </div>
@@ -100,27 +90,7 @@ signup for newsletters/updates?</label> </div>
    */
   after_render: async () => {
     // form controller
-    const allRanges = document.querySelectorAll(".range-wrap");
-    allRanges.forEach((wrap) => {
-      const range = wrap.querySelector(".range");
-      const bubble = wrap.querySelector(".age-bubble");
 
-      range.addEventListener("input", () => {
-        setBubble(range, bubble);
-      });
-      setBubble(range, bubble);
-    });
-
-    function setBubble(range, bubble) {
-      const val = range.value;
-      const min = range.min ? range.min : 0;
-      const max = range.max ? range.max : 100;
-      const newVal = Number(((val - min) * 100) / (max - min));
-      bubble.innerHTML = val;
-
-      // Sorta magic numbers based on size of the native UI thumb
-      bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
-    }
     const config = await getItems();
     console.log(config);
     // select form els

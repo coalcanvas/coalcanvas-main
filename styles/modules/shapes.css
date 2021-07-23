@@ -1,0 +1,39 @@
+.square,
+.circle {
+    pointer-events: none;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    margin: 1px;
+    background-color: #1137299f;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+.small {
+    width: 18px;
+    height: 18px;
+}
+
+.shadow {
+    position: absolute;
+    opacity: 0.2;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.demo-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 280px;
+    height: 100%;
+    top: -20vh;
+    left: 25vw;
+    z-index: 21;
+}

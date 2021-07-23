@@ -16,12 +16,12 @@ const Switch = {
     </filter>
   </defs>
   <g id="Component_4_1" data-name="Component 4 – 1" transform="translate(2 7)">
-    <g id="Rectangle_1" data-name="Rectangle 1" fill="#fff" stroke="#707070" stroke-width="1">
+    <g id="Rectangle_1" data-name="Rectangle 1" fill="#309e937a" stroke="#707070" stroke-width="1">
       <rect width="74" height="103" rx="27" stroke="none"/>
       <rect x="0.5" y="0.5" width="73" height="102" rx="26.5" fill="none"/>
     </g>
     <g transform="matrix(1, 0, 0, 1, -2, -7)" filter="url(#Rectangle_2)">
-      <g id="Rectangle_2-2" data-name="Rectangle 2" transform="translate(9 17)" fill="#fff" stroke="#707070" stroke-width="2">
+      <g id="Rectangle_2-2" data-name="Rectangle 2" transform="translate(9 17)" fill="#309e937a" stroke="#707070" stroke-width="2">
         <rect width="59" height="82" rx="27" stroke="none"/>
         <rect x="1" y="1" width="57" height="80" rx="26" fill="none"/>
       </g>

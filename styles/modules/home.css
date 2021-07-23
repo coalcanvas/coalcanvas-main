@@ -31,10 +31,20 @@
     }
 }
 
-#ass0,
-#ass1,
-#ass2,
-#ass3 {
+.placard {
+    position: absolute;
+    background-color: rgba(45, 60, 53, 0.707);
+    top: 10.5vh;
+    left: 8.5%;
+    z-index: 90;
+    width: 30vw;
+    padding: 50px 20px 50px 20px;
+    height: auto;
+    border-right: 25px solid transparent;
+    word-wrap: break-word;
+}
+
+#ass0 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -43,19 +53,38 @@
 
 #ass0 {
     background-image: url("../gallery/coalcanvasO2.gif");
-    height: 1.2em;
+    height: calc(0.5vh + 0.8em);
+    width: calc(25vw + 1.5em);
 }
 
-#ass1 {
-    background-image: url("https://images.pexels.com/photos/3585089/pexels-photo-3585089.jpeg");
+.trapezoid {
+    border-bottom: 50px solid #555;
+    border-left: -25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    width: 125px;
+    opacity: 0.7;
 }
 
-#ass2 {
-    background-image: url("https://images.pexels.com/photos/5763823/pexels-photo-5763823.jpeg");
+#bg {
+    z-index: 1;
+    transform: scale(1.6);
+    opacity: 0.7;
+    top: -40vh;
+    left: -200px;
+    position: absolute;
 }
 
-#ass3 {
-    background-image: url("https://images.pexels.com/photos/942317/pexels-photo-942317.jpeg");
+@media screen and (max-width: 575px) {
+    #bg {
+        transform: scale(0.8);
+        position: fixed;
+        top: -70vh;
+        left: -75vw;
+    }
+    .connect-icon {
+        transform: scale(0.7) translateX(-3.5vw);
+    }
 }
 
 .hidden {}
@@ -69,4 +98,114 @@
     vertical-align: middle;
     font-size: 3.5em;
     font-weight: 200;
+}
+
+// ICONS
+div>.icon-wrap {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    --dy: 1;
+    --dx: 1;
+    --dz: 0;
+    max-width: 80vw;
+}
+
+.connect-block {
+    top: -160vh;
+    left: 20vw;
+    position: relative;
+}
+
+.connect-icon {
+    width: 80px;
+    height: 70px;
+    border-radius: 10px;
+    font-family: Helvetica;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    background-color: #3a9e8c31;
+    color: #ffffff;
+    box-shadow: 0 9px 28px -9px #237d839f;
+    transform: perspective(525px) translateZ(0) rotateX(var(--dx)) rotateY(var(--dy));
+    transition: all 150ms linear 0s;
+    position: absolute;
+    animation: meld 1s linear;
+    -webkit-animation: meld 1s linear;
+    -moz-animation: meld 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+}
+
+.connect-icon-2 {
+    transform: translateX(20vw) scale(0.6);
+}
+
+.connect-icon-3 {
+    transform: translateX(35vw) scale(0.6) translateY(-8px);
+}
+
+.connect-icon-4 {
+    transform: translateX(50vw) scale(0.6);
+}
+
+.calendly {
+    width: 42.5%;
+    border-radius: 50px;
+    border: rgba(45, 60, 53, 0.597) 3px solid;
+    height: auto;
+    filter: contrast(130%);
+    background-color: #ffffff88;
+}
+
+.instagram {
+    width: 70%;
+    border-radius: 50px;
+    border: rgba(45, 60, 53, 0.597) 5px solid;
+    height: auto;
+    opacity: 70%;
+    filter: contrast(50%);
+}
+
+.linkedin {
+    width: 70.5%;
+    border-radius: 50px;
+    border: rgba(45, 60, 53, 0.597) 5px solid;
+    height: auto;
+    opacity: 70%;
+    filter: contrast(50%);
+    background-color: #fffffff0;
+    padding: 5px;
+}
+
+.email {
+    width: 70.5%;
+    border-radius: 50px;
+    border: rgba(45, 60, 53, 0.597) 5px solid;
+    height: auto;
+    opacity: 70%;
+    filter: contrast(50%);
+    background-color: #fffffff0;
+    padding: 5px;
+}
+
+.move-higher {
+    transform: translateY(-30px);
+}
+
+.move-high {
+    transform: translateY(-15px);
 }

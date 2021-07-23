@@ -4,6 +4,10 @@
     -webkit-perspective-origin: center;
     perspective-origin: center;
     display: inline-block;
+    z-index: 5;
+    top: -100vh;
+    left: 30vw;
+    position: relative;
 }
 
 .perspective-card__content {

@@ -32,9 +32,30 @@
     -moz-animation-fill-mode: both;
 }
 
+.nature {
+    background-color: rgba(45, 104, 76, 0.707);
+    color: #ffffffd3;
+    animation: meld 1s linear;
+    -webkit-animation: meld 1s linear;
+    -moz-animation: meld 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+}
+
 @keyframes meld {
     to {
-        color: rgb(106, 214, 73);
+        color: rgb(23, 26, 22);
         background-color: #ffffffd3;
     }
 }

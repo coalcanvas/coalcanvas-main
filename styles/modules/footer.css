@@ -4,12 +4,12 @@ footer {
     bottom: 0;
     width: 100vw;
     transform: translateY(0%);
-    height: 10vh;
+    height: 5vh;
     left: 0;
 }
 
 footer>p {
-    color: rgb(32, 32, 32);
+    color: rgb(255, 255, 255);
     animation: lightbulb 1s linear;
     /* Pause the animation */
     animation-play-state: paused;
@@ -20,8 +20,24 @@ footer>p {
     animation-fill-mode: both;
 }
 
+.placard-footer {
+    position: absolute;
+    background-color: rgba(45, 60, 53, 0.707);
+    top: -2.5vh;
+    left: -900vw;
+    z-index: 90;
+    width: 1400vw;
+    padding-bottom: 50px;
+    padding-left: 200vw;
+    padding-right: 400vw;
+    overflow-x: hidden;
+    height: 30px;
+    border-right: 25px solid transparent;
+    white-space: nowrap;
+}
+
 @keyframes lightbulb {
     to {
-        color: rgb(106, 214, 73);
+        color: rgb(14, 14, 14);
     }
 }

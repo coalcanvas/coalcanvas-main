@@ -22,11 +22,20 @@ header {
 }
 
 .navbar-brand {
-    transform: rotate(-10deg) scale(1.2) translateX(5%);
+    width: 80%;
+    height: auto;
+    left: 0;
 }
 
 .to-the-left {
     transform: rotate(0deg);
+}
+
+span.tagline {
+    position: absolute;
+    z-index: 5;
+    left: 5vw;
+    transform: translateY(50px);
 }
 
 @media screen and (max-width: 575px) {
@@ -35,10 +44,16 @@ header {
         left: -70px;
     }
     .navbar-brand {
-        transform: scale(0.8) translate(-1em);
+        transform: scale(0.8) translateY(-3vh);
     }
     .to-the-left {
         transform: scale(0.8) translate(-70px);
+    }
+    span.tagline {
+        font-size: xx-small;
+        display: block;
+        top: -4vh;
+        left: 27vw;
     }
     .navbar-nav:hover {
         transform: scale(1.05) translate(20px);
@@ -72,7 +87,6 @@ header {
 }
 
 .navbar {
-    font-family: "Monoton", cursive;
     z-index: 5;
 }
 
