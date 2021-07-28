@@ -8,6 +8,10 @@
     }
 }
 
+input[type="submit"] {
+    font-family: FontAwesome;
+}
+
 .prompter {
     text-align: center;
     width: 100%;

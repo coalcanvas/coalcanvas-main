@@ -33,7 +33,7 @@
 }
 
 .nature {
-    background-color: rgba(45, 104, 76, 0.707);
+    background-color: #00216fc6;
     color: #ffffffd3;
     animation: meld 1s linear;
     -webkit-animation: meld 1s linear;
@@ -56,7 +56,7 @@
 @keyframes meld {
     to {
         color: rgb(23, 26, 22);
-        background-color: #ffffffd3;
+        background-color: #fcfcfcd4;
     }
 }
 

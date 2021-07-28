@@ -11,177 +11,33 @@ const Home = {
    */
   render: async () => {
     return /*html*/ `
-     <section id='home' class='glow col-md-10 col-12 offset-md-1 '>
+
+     <section id='home' class='glow col-md-12 col-12 offset-md-1 '>
                        <h4 class="title-tag text-center mt-2">welcome </h4>
               <hr class='ultralight-border text-center w-25 higher' />
-        <h3 class="sub text-center mb-3 card">Tap on <span class='font-weight-bold'>coalcanvas</span> to begin.
+        <h3 class="sub text-center mb-3 card animate-flicker">expand <span class=' font-weight-bold'> ▼</span>
+      
         </h3>
 
-    <div class="container-fluid move-lower">
+ </section>
+  <section class='placard text-center'>     
+      <div class="container-fluid ">   
 <video id="bg" autoplay muted loop playsinline>
       <source
-        src="../../styles/gallery/pressmasterpexel.mp4"
+        src="../../styles/gallery/pexels-mikhail-nilov-8059676.mp4"
         type="video/mp4"
       />
-      Background by Pressmaster from Pexels
+      Background by Mikhail Nilov from Pexels
     </video>
- 
 
-  </div>      </section>
-  <section class='placard text-center'>     
-  
-  <h3 class='small-text' data-aos="flip-up" data-aos-easing="ease-in-sine" data-aos-duration="1800" data-aos-offset="-500" data-aos-anchor-placement="top-bottom" > Welcome to coalcanvas! You will find all the services we offer on the conveyor at the footer of this page.
+
+  </div>     
+<h3 class='small-text mobile-placard' data-aos="flip-up" data-aos-easing="ease-in-sine" data-aos-duration="1800" data-aos-offset="-500" data-aos-anchor-placement="top-bottom" > Welcome to coalcanvas! You will find all the services we offer on the conveyor at the footer of this page.
   <br/> <br/>
   Meanwhile, if you'd like a FREE digital consultation, please don't hesitate to reach out to me by following your ideal communications channel by tapping on the respective buttons below:</h3>
   
   </section>
-  <div class="demo-content" id='gridbox' data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="800">
-    <div class="grid">
-      <div class="small circle el" style="transform: translateX(-65px) translateY(-20px) rotateZ(-90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-55px) translateY(-20px) rotateZ(-76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(-45px) translateY(-20px) rotateZ(-62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(-35px) translateY(-20px) rotateZ(-48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(-25px) translateY(-20px) rotateZ(-34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(-15px) translateY(-20px) rotateZ(-20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(-5px) translateY(-20px) rotateZ(-6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(5px) translateY(-20px) rotateZ(6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(15px) translateY(-20px) rotateZ(20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(25px) translateY(-20px) rotateZ(34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(35px) translateY(-20px) rotateZ(48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(45px) translateY(-20px) rotateZ(62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(55px) translateY(-20px) rotateZ(76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(65px) translateY(-20px) rotateZ(90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-65px) translateY(-10px) rotateZ(-90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-55px) translateY(-10px) rotateZ(-76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(-45px) translateY(-10px) rotateZ(-62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(-35px) translateY(-10px) rotateZ(-48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(-25px) translateY(-10px) rotateZ(-34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(-15px) translateY(-10px) rotateZ(-20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(-5px) translateY(-10px) rotateZ(-6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(5px) translateY(-10px) rotateZ(6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(15px) translateY(-10px) rotateZ(20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(25px) translateY(-10px) rotateZ(34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(35px) translateY(-10px) rotateZ(48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(45px) translateY(-10px) rotateZ(62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(55px) translateY(-10px) rotateZ(76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(65px) translateY(-10px) rotateZ(90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-65px) translateY(0px) rotateZ(-90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-55px) translateY(0px) rotateZ(-76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(-45px) translateY(0px) rotateZ(-62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(-35px) translateY(0px) rotateZ(-48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(-25px) translateY(0px) rotateZ(-34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(-15px) translateY(0px) rotateZ(-20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(-5px) translateY(0px) rotateZ(-6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(5px) translateY(0px) rotateZ(6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(15px) translateY(0px) rotateZ(20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(25px) translateY(0px) rotateZ(34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(35px) translateY(0px) rotateZ(48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(45px) translateY(0px) rotateZ(62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(55px) translateY(0px) rotateZ(76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(65px) translateY(0px) rotateZ(90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-65px) translateY(10px) rotateZ(-90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-55px) translateY(10px) rotateZ(-76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(-45px) translateY(10px) rotateZ(-62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(-35px) translateY(10px) rotateZ(-48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(-25px) translateY(10px) rotateZ(-34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(-15px) translateY(10px) rotateZ(-20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(-5px) translateY(10px) rotateZ(-6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(5px) translateY(10px) rotateZ(6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(15px) translateY(10px) rotateZ(20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(25px) translateY(10px) rotateZ(34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(35px) translateY(10px) rotateZ(48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(45px) translateY(10px) rotateZ(62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(55px) translateY(10px) rotateZ(76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(65px) translateY(10px) rotateZ(90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-65px) translateY(20px) rotateZ(-90deg);"></div>
-      <div class="small circle el" style="transform: translateX(-55px) translateY(20px) rotateZ(-76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(-45px) translateY(20px) rotateZ(-62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(-35px) translateY(20px) rotateZ(-48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(-25px) translateY(20px) rotateZ(-34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(-15px) translateY(20px) rotateZ(-20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(-5px) translateY(20px) rotateZ(-6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(5px) translateY(20px) rotateZ(6.92308deg);"></div>
-      <div class="small circle el" style="transform: translateX(15px) translateY(20px) rotateZ(20.7692deg);"></div>
-      <div class="small circle el" style="transform: translateX(25px) translateY(20px) rotateZ(34.6154deg);"></div>
-      <div class="small circle el" style="transform: translateX(35px) translateY(20px) rotateZ(48.4615deg);"></div>
-      <div class="small circle el" style="transform: translateX(45px) translateY(20px) rotateZ(62.3077deg);"></div>
-      <div class="small circle el" style="transform: translateX(55px) translateY(20px) rotateZ(76.1538deg);"></div>
-      <div class="small circle el" style="transform: translateX(65px) translateY(20px) rotateZ(90deg);"></div>
-    </div>
-    <div class="grid shadow">
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-      <div class="small circle"></div>
-    </div>
-  </div>
-<div class='connect-block col-auto col-10 col-mx-auto col-md-10 icon-wrap'>
+<div class='connect-block col-auto col-10 col-mx-auto col-md-10 icon-wrap' data-aos="flip-up" data-aos-easing="ease-in-sine" data-aos-duration="1800" data-aos-offset="-500" data-aos-anchor-placement="top-bottom" >
 <div class='row justify-content-md-between  justify-content-between d-flex flex-wrap align-items-center'>
 <div class="connect-icon text-center" id="connect-icon">
 <a href='https://calendly.com/ansb1987'>
@@ -201,7 +57,8 @@ const Home = {
   
   </div>
   </div>
-  
+
+      
     `;
   },
   /**
@@ -213,14 +70,15 @@ const Home = {
     const setProp = (el, prop, value) => el.style.setProperty(prop, value);
 
     const el = document.getElementById("connect-icon");
+    const placard = document.querySelector;
 
     const onMouseUpdate = (e) => {
       let width = el.offsetWidth;
       let XRel = e.pageX - el.offsetLeft;
       let YRel = e.pageY - el.offsetTop;
       //adjust angles
-      let YAngle = (9.5 - XRel / width) * 80;
-      let XAngle = -(0.5 - YRel / width) * 5;
+      let YAngle = (0.1 - XRel / width) * 1;
+      let XAngle = -(0.1 - YRel / width) * 1;
 
       setProp(el, "cursor", "pointer");
       setProp(el, "--dy", `${YAngle}deg`);
@@ -232,32 +90,6 @@ const Home = {
     el.addEventListener("mouseleave", () => {
       el.style.setProperty("--dy", "0");
       el.style.setProperty("--dx", "0");
-    });
-
-    const gbox = document.getElementById("gridbox");
-    const circle = Array.from(document.querySelectorAll(".circle"));
-    anime({
-      targets: [gbox, circle],
-      direction: "alternate",
-      loop: true,
-      borderRadius: ["50%", "0%"],
-      translateX: anime.stagger(100, {
-        grid: [14, 0],
-        from: "center",
-        axis: "x",
-      }),
-      translateY: anime.stagger(10, {
-        grid: [14, 0],
-        from: "center",
-        axis: "y",
-      }),
-      rotateZ: anime.stagger([0, 0], {
-        grid: [14, 0],
-        from: "center",
-        axis: "x",
-      }),
-      delay: anime.stagger(400, { grid: [14, 0], from: "center" }),
-      easing: "cubicBezier(0.175, 0.885, 0.32, 1.475)",
     });
   },
 };

@@ -22,7 +22,7 @@ footer>p {
 
 .placard-footer {
     position: absolute;
-    background-color: rgba(45, 60, 53, 0.707);
+    background-color: #2a334946;
     top: -2.5vh;
     left: -900vw;
     z-index: 90;

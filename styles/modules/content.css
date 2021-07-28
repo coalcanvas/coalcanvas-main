@@ -38,6 +38,7 @@ span.big-ho:hover {
     display: block;
     z-index: 4;
     transform: translate(1em);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
     cursor: pointer;
 }
 
@@ -46,6 +47,7 @@ span.big-ho:hover {
     display: block;
     z-index: 4;
     transform: translate(0) scale(1.05);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
     cursor: pointer;
 }
 
@@ -54,6 +56,7 @@ span.big-ho:hover {
     display: block;
     z-index: 4;
     transform: translate(0.8em);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
     cursor: pointer;
 }
 
@@ -64,6 +67,8 @@ span.big-ho:hover {
     top: 20vh;
     height: 40vh;
     display: inline-flex;
+    transition: clip-path 1500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
 }
 
 @media screen and (max-width: 575px) {
@@ -71,6 +76,8 @@ span.big-ho:hover {
     #about_2,
     #about_3 {
         height: 30vh;
+        transition: clip-path 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        clip-path: polygon(5% -5%, 10% 58%, 185% 50%, 115% 0%);
     }
     #about_1 {
         transform: translate(20vw);

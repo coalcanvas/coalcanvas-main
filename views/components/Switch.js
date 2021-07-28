@@ -16,19 +16,19 @@ const Switch = {
     </filter>
   </defs>
   <g id="Component_4_1" data-name="Component 4 – 1" transform="translate(2 7)">
-    <g id="Rectangle_1" data-name="Rectangle 1" fill="#309e937a" stroke="#707070" stroke-width="1">
+    <g id="Rectangle_1" data-name="Rectangle 1" fill="#d6d6d650" stroke="#3c3b3b" stroke-width="1">
       <rect width="74" height="103" rx="27" stroke="none"/>
       <rect x="0.5" y="0.5" width="73" height="102" rx="26.5" fill="none"/>
     </g>
     <g transform="matrix(1, 0, 0, 1, -2, -7)" filter="url(#Rectangle_2)">
-      <g id="Rectangle_2-2" data-name="Rectangle 2" transform="translate(9 17)" fill="#309e937a" stroke="#707070" stroke-width="2">
+      <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(9 17)" fill="#2be43a50" stroke="#7070708b" stroke-width="2">
         <rect width="59" height="82" rx="27" stroke="none"/>
         <rect x="1" y="1" width="57" height="80" rx="26" fill="none"/>
       </g>
     </g>
   </g>
 </svg>
-<label class='flipper text-muted lg-text'>🌚</label>
+<label class='flipper text-muted small-text'>🌙</label>
 </div>
     `;
   },
@@ -38,6 +38,7 @@ const Switch = {
    */
   after_render: async () => {
     var btn = document.querySelector("#switch");
+    const toggler = document.querySelector("g #Rectangle_2");
 
     btn.addEventListener("click", function () {
       var elem = document.querySelector("#flip");
@@ -46,12 +47,16 @@ const Switch = {
         elem.getAttribute("dy", "-8");
         elem.setAttribute("dy", "11");
         elemT.textContent = `💡`;
+        toggler.getAttribute("fill", "#04150550");
+        toggler.setAttribute("fill", "#ffffff77");
         window.scroll({ top: 0, left: 0, behavior: "smooth" });
         // document.body.scrollTop = 0; // For Safari
         // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       } else {
-        elemT.textContent = `🌚`;
+        elemT.textContent = `🌙`;
         elem.setAttribute("dy", "-8");
+        toggler.getAttribute("fill", "#ffffff77");
+        toggler.setAttribute("fill", "#04150550");
         window.scroll({ top: 2500, left: 0, behavior: "smooth" });
         // window.scrollTo(0, document.body.scrollHeight); // For Safari
         // window.scrollTo(0, document.documentElement.scrollHeight); // For Chrome, Firefox, IE and Opera

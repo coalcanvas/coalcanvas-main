@@ -76,7 +76,7 @@ const Contact = {
         <label class="form-check-label xsmall-text" for="newsletter">
 signup for newsletters/updates?</label> </div>
 
-    <input id='btn'  type="submit" class="btn btn-sm isomorph-o nature d-flex offset-md-6 offset-5"></input>
+    <input id='btn'  type="submit" class="btn btn-sm isomorph-o techno d-flex offset-md-6 offset-5" value='submit &#xf50d' ></input> 
 </form>
         </div>
     </div>

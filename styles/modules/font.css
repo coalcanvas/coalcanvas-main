@@ -188,6 +188,7 @@ h5 {
 .sub {
     font-size: calc(0.6em + 0.3vw) !important;
     margin: auto;
+    top: 12vh;
 }
 
 h6 {

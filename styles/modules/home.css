@@ -33,15 +33,22 @@
 
 .placard {
     position: absolute;
-    background-color: rgba(45, 60, 53, 0.707);
+    background-color: rgba(45, 45, 60, 0.707);
     top: 10.5vh;
     left: 8.5%;
-    z-index: 90;
+    opacity: 0.7;
+    z-index: 10;
     width: 30vw;
     padding: 50px 20px 50px 20px;
+    transition: clip-path 1500ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%);
     height: auto;
     border-right: 25px solid transparent;
     word-wrap: break-word;
+}
+
+.placard:hover {
+    clip-path: polygon(0% 0%, 0% 400%, 100% 400%, 100% 0%);
 }
 
 #ass0 {
@@ -57,33 +64,40 @@
     width: calc(25vw + 1.5em);
 }
 
-.trapezoid {
-    border-bottom: 50px solid #555;
-    border-left: -25px solid transparent;
-    border-right: 25px solid transparent;
-    height: 0;
-    width: 125px;
-    opacity: 0.7;
-}
-
 #bg {
-    z-index: 1;
+    z-index: 0;
     transform: scale(1.6);
-    opacity: 0.7;
-    top: -40vh;
-    left: -200px;
+    opacity: 0.9;
+    top: -20vh;
+    left: 0px;
+    width: auto;
+    height: 100vh;
     position: absolute;
 }
 
 @media screen and (max-width: 575px) {
     #bg {
-        transform: scale(0.8);
-        position: fixed;
-        top: -70vh;
-        left: -75vw;
+        transform: scale(0.6);
+        position: relative;
+        top: -40vh;
+        left: -140vw;
+        opacity: 0.6;
+        width: auto;
+        height: 100%;
     }
     .connect-icon {
         transform: scale(0.7) translateX(-3.5vw);
+    }
+    .placard {
+        clip-path: polygon(0% 0%, 0% 10%, 100% 10%, 100% 0%);
+        -webkit-clip-path: polygon(0% 0%, 0% 20%, 100% 20%, 100% 0%);
+    }
+    .mobile-placard {
+        top: -30vh;
+        position: relative;
+    }
+    .connect-block {
+        top: -100vh;
     }
 }
 
@@ -113,21 +127,22 @@ div>.icon-wrap {
 }
 
 .connect-block {
-    top: -140vh;
+    top: -150vh;
     left: 20vw;
     position: relative;
+    z-index: 9;
 }
 
 .connect-icon {
     width: 80px;
     height: 70px;
-    border-radius: 10px;
-    font-family: Helvetica;
+    border-radius: 30%;
+    font-family: "Fira Sans", sans-serif;
     display: grid;
     justify-content: center;
     align-content: center;
-    background-color: #3a9e8c31;
-    color: #ffffff;
+    background-color: #3a6e9e58;
+    color: #6d6d6d5b;
     box-shadow: 0 9px 28px -9px #237d839f;
     transform: perspective(525px) translateZ(0) rotateX(var(--dx)) rotateY(var(--dy));
     transition: all 150ms linear 0s;
@@ -168,7 +183,7 @@ div>.icon-wrap {
     border: rgba(45, 60, 53, 0.597) 3px solid;
     height: auto;
     filter: contrast(130%);
-    background-color: #ffffff88;
+    background-color: #ffffff80;
 }
 
 .instagram {
@@ -187,7 +202,7 @@ div>.icon-wrap {
     height: auto;
     opacity: 70%;
     filter: contrast(50%);
-    background-color: #fffffff0;
+    background-color: #ffffffcb;
     padding: 5px;
 }
 
