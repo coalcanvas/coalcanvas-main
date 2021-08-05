@@ -13,6 +13,13 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="icon" type="image/png" href="./styles/gallery/favicon.ico" />
     <script src="https://kit.fontawesome.com/c9327ae5a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" />
+    <!--[if (lt IE 9)
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.helper.ie8.js"></script
+    ><![endif]-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/css/autoComplete.min.css" />
+
     <link rel="stylesheet" href="./styles/styles.css" />
     <!-- Google Tag Manager -->
     <script>
@@ -53,21 +60,28 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header root (always visible) -->
-    <header id="header_root"></header>
-    <div id="drawer"></div>
+    <header id="header_root" class="mb-5"></header>
+    <div id="modal"></div>
 
-    <div id="switch_root" class="d-flex justify-content-center"></div>
     <!-- Page root (content rendered based on URL) -->
-    <main id="page_root" class="btm-shadow"></main>
+    <main id="page_root" class="my-5 mt-5 btm-shadow"></main>
 
     <!-- Footer root (always visible) -->
-
+    <div id="switch_root"></div>
     <footer id="footer_root"></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    <!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    <script type="module">
+        import { tns } from "./services/modules/tiny-slider.js"; var slider = tns({ container: ".my-slider", slideBy: "page", autoplay: true, autoWidth: true, items: 3.3, gutter: 10, mouseDrag: true, swipeAngle: false, container: "#autoWidth", speed: 400, });
+    </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-
-    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.min.js"></script>
+    <script type="module" src="https://unpkg.com/micromodal/dist/micromodal.min.js">
+        import MicroModal from "micromodal";
+    </script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/tarekraafat-autocomplete.js/10.2.6/autoComplete.min.js">
+        import autoComplete from "@tarekraafat/autocomplete.js";
+    </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 

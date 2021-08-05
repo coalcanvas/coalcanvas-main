@@ -9,12 +9,11 @@
 @import "./modules/containers.css";
 @import "./modules/drawer.css";
 @import "./modules/background.css";
-@import "./modules/buttons.css";
+@import "./modules/switch.css";
 @import "./modules/slider.css";
 @import "./modules/home.css";
 @import "./modules/content.css";
 @import "./modules/perspective-card.css";
 @import "./modules/catalog.css";
-@import "./modules/interactive-tiles.css";
 @import "./modules/shapes.css";
 @import "./modules/modal.css";

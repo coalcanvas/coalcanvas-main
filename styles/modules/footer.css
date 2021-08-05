@@ -4,8 +4,9 @@ footer {
     bottom: 0;
     width: 100vw;
     transform: translateY(0%);
-    height: 5vh;
+    height: 7vh;
     left: 0;
+    overflow-x: hidden;
 }
 
 footer>p {
@@ -21,9 +22,9 @@ footer>p {
 }
 
 .placard-footer {
-    position: absolute;
+    position: fixed;
     background-color: #2a334946;
-    top: -2.5vh;
+    bottom: 0;
     left: -900vw;
     z-index: 90;
     width: 1400vw;

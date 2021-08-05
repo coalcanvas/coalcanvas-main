@@ -22,3 +22,5 @@ const getItems = async () => {
     console.log("(App) Error occured while getting data.", error);
   }
 };
+
+export default getItems;

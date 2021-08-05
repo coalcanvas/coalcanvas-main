@@ -1,6 +1,7 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
 
-module.exports = {
+export default configs = {
   // Build conf variable.
   app_name: process.env.APP_NAME,
   API_DEVELOPMENT: process.env.API_DEVELOPMENT,
@@ -10,4 +11,5 @@ module.exports = {
   FB_APP_ID: process.env.FB_APP_ID,
   DISQUS_SHORTNAME: process.env.DISQUS_SHORTNAME,
   GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
+  PEXEL_API_KEY: process.env.PEXELS_API_KEY,
 };

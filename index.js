@@ -10,11 +10,14 @@ import Contact from "./views/pages/Contact.js";
 import Error404 from "./views/pages/Error404.js";
 
 import Navbar from "./views/components/Navbar.js";
-import Drawer from "./views/components/Drawer.js";
+import Modal from "./views/components/Modal.js";
+/* import Drawer from "./views/components/Drawer.js"; */
 import Footer from "./views/components/Footer.js";
 import Switch from "./views/components/Switch.js";
 
 import { parseRequestUrl } from "./services/utils.js";
+
+//import modules
 
 // List of supported routes. Any url other than these will render 404 page.
 const routes = {
@@ -35,7 +38,7 @@ const routes = {
 const router = async () => {
   // Lazy load view element:
   const header = null || document.getElementById("header_root");
-  const drawer = null || document.getElementById("drawer");
+  const modal = null || document.getElementById("modal");
   const switcher = null || document.getElementById("switch_root");
   const content = null || document.getElementById("page_root");
   const footer = null || document.getElementById("footer_root");
@@ -43,8 +46,8 @@ const router = async () => {
   // Render the header and footer of the page.
   header.innerHTML = await Navbar.render();
   await Navbar.after_render();
-  drawer.innerHTML = await Drawer.render();
-  await Drawer.after_render();
+  modal.innerHTML = await Modal.render();
+  await Modal.after_render();
   switcher.innerHTML = await Switch.render();
   await Switch.after_render();
   footer.innerHTML = await Footer.render();
@@ -69,8 +72,12 @@ const router = async () => {
  */
 // window.addEventListener("DOMContentLoaded", router);
 
+// next we need to subscribe to "popstate" which let's us know when the user has clicked the
+// "back" or "forward" button on their browser
+window.addEventListener("popstate", router);
+window.addEventListener("onhashchange", router);
 // Listen on hash change.
-window.addEventListener("hashchange", router);
+/* window.addEventListener("hashchange", router); */
 
 // Listen on page load.
 window.addEventListener("load", router);

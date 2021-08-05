@@ -116,10 +116,17 @@
     }
 }
 
+@media screen and (max-width: 575px) {
+    .showreel {
+        animation: 25s linear 0s infinite forwards none running beritext;
+        animation-duration: 25s;
+    }
+}
+
 .showreel {
     display: inline-block;
-    animation: 25s linear 0s infinite forwards none running beritext;
-    animation-duration: 25s;
+    animation: 45s linear 0s infinite forwards none running beritext;
+    animation-duration: 45s;
     animation-timing-function: linear;
     animation-delay: 0s;
     animation-iteration-count: infinite;
@@ -190,6 +197,7 @@ a:hover {
     filter: sepia(80%);
     transform: translateX(20px) scale(0.95);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: rgba(255, 217, 0, 0.837);
 }
 
 .shrink {

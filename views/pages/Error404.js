@@ -5,7 +5,7 @@ const Error404 = {
   render: async () => {
     return /*html*/ `
       <section class='col-md-10 col-10 offset-1 offset-md-1'>
-        <h1 class="title-tag text-center blur-bg"> <span class="black-text"> Error 404 </span><span class="isomorph-o blue-text">|</span> Page not found.</h1>
+        <h1 class="title-tag text-center blur-bg"> <span class="white-text"> Error 404 </span><span class="isomorph-o blue-text">|</span> Page not found.</h1>
 
         <p class='sub col-auto col-md-auto col-8 col-md-8 offset-2 offset-md-2 isomorph-o text-center p-2'>
                If you were searching for something similar here but couldn't find it, <a href="/#/contact">mail us</a> and we will try our best to provide. </p>

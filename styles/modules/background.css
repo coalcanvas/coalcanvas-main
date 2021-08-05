@@ -1,7 +1,7 @@
 .glow {
-    -moz-box-shadow: 8px 0px 48px #7286b6 !important;
-    -webkit-box-shadow: 8px 0px 48px #7286b6 !important;
-    box-shadow: 8px 0px 48px #7286b6 !important;
+    -moz-box-shadow: 8px 0px 48px #3e3d6a !important;
+    -webkit-box-shadow: 8px 0px 48px #3e3d6a !important;
+    box-shadow: 8px 0px 48px #3e3d6a !important;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     transition: all 1.2s cubic-bezier(0.175, 0.885, 0.52, 1.275);

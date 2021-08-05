@@ -11,6 +11,7 @@ const getItems = async () => {
     const options = { cache: "no-cache" };
     // Get a response from the API.
     const response = await fetch(apiUrl, options);
+
     // Parse response into JSON.
     const data = await response.json();
     // Print fetched data to the console.
@@ -22,6 +23,7 @@ const getItems = async () => {
     console.log("(App) Error occured while getting data.", error);
   }
 };
+
 const Contact = {
   /**
    * Render the page content.
@@ -30,7 +32,7 @@ const Contact = {
   render: async () => {
     return /*html*/ `
      <div id='contact' class="container-fluid pb-5">
-      <section class=' col-md-10 col-12 offset-md-1 mt-2'>
+      <section id='contact-1' class=' col-md-10 col-12 offset-md-1 mt-2'>
         <h4 class="title-tag text-center blur-bg pt-2" data-aos-offset="50" data-aos="zoom-in" data-aos-easing="ease-in-sine" data-aos-duration="800">Contact 📧</h4>
         <hr class='ultralight-border text-center w-25 higher' />
 
@@ -76,7 +78,9 @@ const Contact = {
         <label class="form-check-label xsmall-text" for="newsletter">
 signup for newsletters/updates?</label> </div>
 
-    <input id='btn'  type="submit" class="btn btn-sm isomorph-o techno d-flex offset-md-6 offset-5" value='submit &#xf50d' ></input> 
+    <div class=' d-flex offset-md-4 offset-5 w-25 text-center'>
+    <input id='btn'  type="submit" class="btn btn-sm isomorph-o techno w-50 " value='submit &#xf50d' ></input> 
+    </div>
 </form>
         </div>
     </div>
@@ -91,7 +95,7 @@ signup for newsletters/updates?</label> </div>
   after_render: async () => {
     // form controller
 
-    const config = await getItems();
+    const config = getItems();
     console.log(config);
     // select form els
 
@@ -159,6 +163,7 @@ signup for newsletters/updates?</label> </div>
           output.style.transition =
             "all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s 1";
           output.style.backgroundColor = "chartreuse";
+          output.style.opacity = "0.8";
         });
       }
       function successOut() {

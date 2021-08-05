@@ -33,7 +33,7 @@
 }
 
 .nature {
-    background-color: #00216fc6;
+    background-color: #25006fb8;
     color: #ffffffd3;
     animation: meld 1s linear;
     -webkit-animation: meld 1s linear;
@@ -53,10 +53,74 @@
     -moz-animation-fill-mode: both;
 }
 
+.nature-2 {
+    border: 0.5px solid #25006f91;
+    background-color: #ffffff15;
+    color: rgb(255, 255, 255);
+    animation: meld-2 1s linear;
+    -webkit-animation: meld-2 1s linear;
+    -moz-animation: meld-2 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    font-weight: 100;
+    -moz-animation-fill-mode: both;
+}
+
+.nature-3,
+button {
+    border: 0.5px solid #25006f91;
+    background-color: #ffffff15;
+    color: rgb(255, 255, 255);
+    animation: meld-3 1s linear;
+    -webkit-animation: meld-3 1s linear;
+    -moz-animation: meld-3 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: calc(var(--scroll) * -1s);
+    -webkit-animation-delay: calc(var(--scroll) * -1s);
+    /* These last 2 properites clean up overshoot weirdness */
+    animation-iteration-count: 1;
+    -webkit-animation-iteration-count: 1;
+    -moz-animation-iteration-count: 1;
+    animation-fill-mode: both;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    font-weight: 600;
+}
+
 @keyframes meld {
     to {
         color: rgb(23, 26, 22);
         background-color: #fcfcfcd4;
+    }
+}
+
+@keyframes meld-2 {
+    to {
+        border: 0.5px solid #5e5e5e91;
+        background-color: #00000015;
+        color: rgb(124, 124, 124);
+        font-weight: 400;
+    }
+}
+
+@keyframes meld-3 {
+    to {
+        border: 0.5px solid #5e5e5e91;
+        background-color: #c9c9c9ad;
+        color: rgb(255, 255, 255);
     }
 }
 

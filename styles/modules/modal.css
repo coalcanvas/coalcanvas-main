@@ -19,6 +19,14 @@
     opacity: 1;
 }
 
+.icon-active {
+    transform: translate(-15px, -15px);
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+}
+
 .leftright {
     height: 4px;
     width: 15px;
@@ -70,3 +78,6 @@ em {
     opacity: 1;
     display: block;
 }
+
+
+/* Modal */

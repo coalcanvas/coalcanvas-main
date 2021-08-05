@@ -4,9 +4,9 @@ const Footer = {
    */
   render: async () => {
     return /*html*/ `
-    <footer>
+    <footer  class='placard-footer text-center showreel'>
 
-      <section class='placard-footer text-center showreel'>     
+   
   
   <h3 class='small-text'> Services offered
 
@@ -221,8 +221,7 @@ AI/ML audio-visual manipulation
 </h3>
 
 
-
-</section>
+ 
       
       </footer>
     `;
