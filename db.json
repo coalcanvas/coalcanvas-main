@@ -52,7 +52,8 @@
     "config": [{
         "id": 0,
         "APPSCRIPT_SCRIPT_ID": "https://script.google.com/macros/s/AKfycbx3xweC-zyC75-fvDGgXskgVupJwl2KpuATQfcfLcdjFSnI9GJ4DrjGlMkSYeNCn1Ox/exec",
-        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbx3xweC-zyC75-fvDGgXskgVupJwl2KpuATQfcfLcdjFSnI9GJ4DrjGlMkSYeNCn1Ox",
+        "APPSCRIPT_DEPLOYMENT_ID": "AKfycbylR7QAeJRuIz6824G2KSSfX6JYVtya_5qPdssPNnsD91yEwYByyZtYj07ZgCsxWxmz",
+        "APPSCRIPT_DEPLOYMENT_IDv1": "AKfycbx3xweC-zyC75-fvDGgXskgVupJwl2KpuATQfcfLcdjFSnI9GJ4DrjGlMkSYeNCn1Ox",
         "APPSCRIPT_LIB_URL": "https://script.google.com/macros/library/d/1gbZx7SZbA_ZNvpzf_BGchg46EBmIfDRdnBUg9nVqTRYdmpVQtoEMDe9F/10",
         "headers": {
             "Content-Type": "application/json",
