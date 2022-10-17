@@ -2,7 +2,7 @@ import * as THREE from "https://unpkg.com/three@0.144.0/build/three.module.js";
 import gsap from "gsap";
 import { OrbitControls } from "https://unpkg.com/three@0.144.0/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
-import "style.css";
+import "";
 import "swiper.css";
 
 //THREE
