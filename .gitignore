@@ -1,7 +1,3 @@
-node_modules
-package-lock.json
-.env
-octo.html
-.npmrc
-chatbot.css
-kb-breakdown.mp4
+/node_modules
+/docs
+/views
