@@ -1,3 +1,13 @@
+node_modules
+docs
+views
+package-lock.json
+
+
+.env
+ 
+.npmrc
+ 
 /node_modules
 /docs
 /views
