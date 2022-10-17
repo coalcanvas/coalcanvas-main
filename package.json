@@ -1,6 +1,7 @@
 {
     "name": "3️⃣js",
-    "repository": "#",
+    "repository": "https://github.com/coalcanvas/coalcanvas.github.io.git",
+    "version": "v0.0.1",
     "author": "coalcanvas",
     "license": "INFAM0U5",
     "main": "index.js",
