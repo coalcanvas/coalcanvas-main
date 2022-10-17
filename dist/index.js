@@ -1,9 +1,9 @@
 import * as THREE from "https://unpkg.com/three@0.144.0/build/three.module.js";
-import gsap from "gsap";
+import gsap from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js";
 import { OrbitControls } from "https://unpkg.com/three@0.144.0/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
-import "";
-import "swiper.css";
+import "./dist/style.css";
+import "./dist/swiper.css";
 
 //THREE
 
