@@ -28,7 +28,7 @@
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script type="importmap">
-        { "imports": { "three": "https://unpkg.com/three@0.144.0/build/three.module.js", "gsap": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js", "swiper/css": "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css", "OrbitControls":
+        { "imports": { "three": "https://unpkg.com/three@0.144.0/build/three.module.js", "gsap": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js", "swiper/css": "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css", "three/examples/jsm/controls/OrbitControls":
         "https://unpkg.com/three@0.144.0/examples/jsm/controls/OrbitControls.js", "swiper": "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js", "dat.gui": "https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js" }
         }
     </script>
@@ -297,9 +297,9 @@
     </div>
 
     <script type="module">
-        import Swiper, { Navigation, Pagination } from "swiper"; import "swiper/css"; import "swiper/css/navigation"; import "swiper/css/pagination"; let className = [ "icon ion-ios-home-outline", "fa-thin fa-square-bolt", "fa-thin fa-toolbox", "fa-thin fa-photo-film",
-        "fa-thin fa-message-middle", "fa-thin fa-vr-cardboard", "icon ion-ios-home-outline", ]; let labels = ["home", "focus", "timeline", "vlog", "contact", "watch"]; const swiper = new Swiper(".swiper", { modules: [Navigation, Pagination], spaceBetween:
-        30, direction: "vertical", speed: 850, pagination: { el: ".swiper-pagination", clickable: true, renderBullet: function (index, className) { return ( `
+        import Swiper, { Navigation, Pagination } from "swiper"; import "swiper/css"; let className = [ "icon ion-ios-home-outline", "fa-thin fa-square-bolt", "fa-thin fa-toolbox", "fa-thin fa-photo-film", "fa-thin fa-message-middle", "fa-thin fa-vr-cardboard",
+        "icon ion-ios-home-outline", ]; let labels = ["home", "focus", "timeline", "vlog", "contact", "watch"]; const swiper = new Swiper(".swiper", { modules: [Navigation, Pagination], spaceBetween: 30, direction: "vertical", speed: 850, pagination:
+        { el: ".swiper-pagination", clickable: true, renderBullet: function (index, className) { return ( `
         <span class=` + className + `>` +
               labels[index] +
               `
