@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import gsap from "gsap";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
 import "./style.css";
 import "./swiper.css";
