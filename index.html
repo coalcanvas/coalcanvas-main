@@ -22,12 +22,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="module" src="./index.js"></script>
 </head>
 
 <body>
@@ -99,9 +99,11 @@
                     </div>
                 </div>
                 <div class="swiper-slide xlg-text">
+                    <hr />
                     <h1 style="transform: translate(20vw, -35vh); white-space: nowrap">
-                        FEATURES
+                        MY FOCUS
                     </h1>
+                    <hr />
                     <section class="slide d-flex">
                         <div class="flip-card">
                             <div class="flip-card-inner">
@@ -122,7 +124,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="centered">Digital Marketing Services</h2>
+                            <h2 class="centered">DIGITAL PRESENCE + FUN</h2>
                         </div>
 
                         <div class="flip-card">
@@ -144,7 +146,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="centered">Go Paperless!</h2>
+                            <h2 class="centered">GO PAPERLESS!</h2>
                         </div>
 
                         <div class="flip-card">
@@ -159,9 +161,7 @@
                                 </div>
                                 <div class="flip-card-back">
                                     <div class="align-bottom">
-                                        <p class="bold-text">
-                                            BI Dashhboarding & Analytics Solutions
-                                        </p>
+                                        <p class="bold-text">ANALYZE & VISUALIZE</p>
                                         <p>
                                             Makes sense of your data and how you fare in your marketing efforts/return on investments (ROI).
                                         </p>
@@ -183,11 +183,9 @@
                                 </div>
                                 <div class="flip-card-back">
                                     <div class="align-bottom">
-                                        <p class="bold-text">
-                                            tread unknown-terrirory with ease.
-                                        </p>
+                                        <p class="bold-text">TREAD THE UNKNOWN.</p>
                                         <p>
-                                            we assist you in implementing new and innovative marketing solutions with risk mitigation in mind toward cost-savings.
+                                            assist you in implementing new and innovative marketing solutions with risk mitigation in mind toward cost-savings.
                                         </p>
                                     </div>
                                 </div>
@@ -291,11 +289,11 @@
             </div>
         </footer>
     </div>
-    <script defer type="module" src="./dist/index.js"></script>
+
     <script type="module">
-        import Swiper, { Navigation, Pagination, } from "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.js"; import "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.3.2/swiper-bundle.min.css"; let className = [ "icon ion-ios-home-outline",
-        "fa-thin fa-square-bolt", "fa-thin fa-toolbox", "fa-thin fa-photo-film", "fa-thin fa-message-middle", "fa-thin fa-vr-cardboard", "icon ion-ios-home-outline", ]; let labels = ["home", "features", "timeline", "vlog", "contact", "watch"]; const swiper
-        = new Swiper(".swiper", { modules: [Navigation, Pagination], spaceBetween: 30, direction: "vertical", speed: 850, pagination: { el: ".swiper-pagination", clickable: true, renderBullet: function (index, className) { return ( `
+        import Swiper, { Navigation, Pagination } from "swiper"; import "swiper/css"; import "swiper/css/navigation"; import "swiper/css/pagination"; let className = [ "icon ion-ios-home-outline", "fa-thin fa-square-bolt", "fa-thin fa-toolbox", "fa-thin fa-photo-film",
+        "fa-thin fa-message-middle", "fa-thin fa-vr-cardboard", "icon ion-ios-home-outline", ]; let labels = ["home", "features", "timeline", "vlog", "contact", "watch"]; const swiper = new Swiper(".swiper", { modules: [Navigation, Pagination], spaceBetween:
+        30, direction: "vertical", speed: 850, pagination: { el: ".swiper-pagination", clickable: true, renderBullet: function (index, className) { return ( `
         <span class=` + className + `>` +
               labels[index] +
               `

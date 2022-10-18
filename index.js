@@ -1,12 +1,10 @@
-import * as THREE from "https://unpkg.com/three@0.144.0/build/three.min.js";
-import gsap from "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js";
-import { OrbitControls } from "https://unpkg.com/three@0.144.0/examples/jsm/controls/OrbitControls.js";
-import * as dat from "https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js";
-
+import * as THREE from "three";
+import gsap from "gsap";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import * as dat from "dat.gui";
 import "./style.css";
 import "./swiper.css";
 
-alert("erf");
 //THREE
 
 var scene, ray;
@@ -85,7 +83,7 @@ function generateSphere() {
 
 ray = new THREE.Raycaster();
 scene = new THREE.Scene();
-//scene.background = new THREE.Color("hsla(258, 16%, 7%, 0.7)");
+scene.background = new THREE.Color("hsla(258, 16%, 7%, 0.7)");
 camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1500);
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 
@@ -120,9 +118,9 @@ const sphereGeometry = new THREE.SphereGeometry(
 const sphereMaterial = new THREE.MeshPhongMaterial({
   opacity: 0.6,
   side: THREE.DoubleSide,
-
+  flatShading: THREE.FlatShading,
   vertexColors: true,
-  wireframe: true,
+  wireframe: false,
 });
 const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphereMesh);
@@ -344,15 +342,15 @@ function animate() {
     intersects[0].object.geometry.attributes.color.needsUpdate = true;
 
     const initialColor = {
-      r: 1.5,
-      g: 2.3,
-      b: 0.2,
+      r: 0.6,
+      g: 0,
+      b: 1,
     };
 
     const hoverColor = {
-      r: 1,
+      r: 0.3,
       g: 0,
-      b: 0,
+      b: 1,
     };
 
     gsap.to(hoverColor, {
@@ -409,6 +407,3 @@ window.onload = function () {
       );
     });
 };
-if (module.hot) {
-  module.hot.accept();
-}
