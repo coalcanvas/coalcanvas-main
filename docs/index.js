@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import gsap from "gsap";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import * as dat from "dat.gui";
+// import * as dat from "dat.gui";
 import Swiper, { Pagination, Navigation } from "swiper";
 
 let className = [
@@ -53,8 +53,8 @@ const windowHalf = new THREE.Vector2(
   window.innerWidth / 2,
   window.innerHeight / 2
 );
-const gui = new dat.GUI();
-dat.GUI.toggleHide();
+// const gui = new dat.GUI();
+// dat.GUI.toggleHide();
 const world = {
   sphere: {
     radius: 15.662,
@@ -66,13 +66,13 @@ const world = {
     thetaLength: 6.283185307179586,
   },
 };
-gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
-gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
-gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
-gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
-gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
-gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
-gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
+// gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
+// gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
+// gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
+// gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
 
 function generateSphere() {
   sphereMesh.geometry.dispose();
