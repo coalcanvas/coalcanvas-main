@@ -1,7 +1,8 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // import * as dat from "dat.gui";
-
+import SwiperCore, { Pagination } from "swiper";
+SwiperCore.use([Pagination]);
 let className = [
   "icon ion-ios-home-outline",
   "fa-thin fa-square-bolt",
