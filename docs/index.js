@@ -12,7 +12,7 @@ let className = [
   "icon ion-ios-home-outline",
 ];
 let labels = ["home", "focus", "timeline", "vlog", "contact", "watch"];
-const swiper = new Swiper(".swiper", {
+var swiper = new Swiper(".swiper", {
   // modules: [Navigation, Pagination],
   spaceBetween: 30,
   direction: "vertical",
@@ -31,7 +31,10 @@ const swiper = new Swiper(".swiper", {
       </span>`
       );
     },
+    parallax: true,
     loop: true,
+    observer: true,
+    observeParents: true,
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     navigation: {

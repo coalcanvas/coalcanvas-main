@@ -1119,6 +1119,7 @@ h6 {
     bottom: 0px;
     width: 100vw;
     display: inline-block;
+    height: 5vh;
 }
 
 .footer-dark h3 {
@@ -2227,16 +2228,13 @@ div>.icon-wrap {
 }
 
 .connect-icon {
-    width: 40px;
-    height: 70px;
-    border-radius: 50%;
-    font-family: "Fira Sans", sans-serif;
+    max-width: 10vh;
+    max-height: 6vh !important;
+    min-height: 3vh !important;
     display: flex;
     justify-content: center;
     align-content: center;
-    background-color: #ffffff15;
     color: rgb(255, 255, 255);
-    box-shadow: 0 9px 28px -9px #237d839f;
     transform: perspective(525px) translateZ(0) rotateX(var(--dx)) rotateY(var(--dy));
     transition: all 150ms linear 0s;
     position: absolute;
@@ -2255,11 +2253,14 @@ div>.icon-wrap {
     font-weight: 600;
     -moz-animation-fill-mode: both;
     z-index: 30;
-    margin-left: 20vw;
+    margin-left: 25vw;
+    margin-bottom: 2vh;
 }
 
 .connect-icon-2 {
-    transform: translateX(20vw) scale(0.2);
+    transform: scale(0.6);
+    z-index: 30;
+    margin-left: 44vw;
 }
 
 .connect-icon-3 {
@@ -2280,7 +2281,7 @@ div>.icon-wrap {
 }
 
 .instagram {
-    width: 30%;
+    width: 80%;
     border-radius: 50px;
     border: rgba(45, 60, 53, 0.597) 5px solid;
     height: auto;
