@@ -17,7 +17,7 @@
     </style>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="icon" type="image/png" href="./images/gallery/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet" />
@@ -43,37 +43,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.js" type="module"></script>
 
     <script defer type="module" src="/index.js"></script>
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                "gtm.start": new Date().getTime(),
-                event: "gtm.js",
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != "dataLayer" ? "&l=" + l : "";
-            j.async = true;
-            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-W2HBC2X");
-    </script>
-    <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-W2HBC2X"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe
-    ></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <div id="app">
         <div class="menu" style="
           display: inline-block;
@@ -326,21 +298,38 @@
     </div>
     <div class="footer-dark">
         <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col item social">
-                        <a href="#"><i class="icon ion-social-facebook"></i></a
-              ><a href="#"><i class="icon ion-social-twitter"></i></a
-              ><a href="#"><i class="icon ion-social-snapchat"></i></a
-              ><a href="#"><i class="icon ion-social-instagram"></i></a>
+
+            <div class='col-auto col-12 col-mx-auto col-md-12 icon-wrap'>
+                <div class='row justify-content-md-between  justify-content-between d-flex flex-wrap align-items-center'>
+                    <div class="connect-icon text-center" id="connect-icon">
+                        <a href='https://calendly.com/ansb1987'>
+                            <img src='./images/gallery/calendly.svg' class='calendly' /> <br/><label class='xsmall-text'>schedule consultation</label>
+                        </a>
                     </div>
-                </div>
-                <p class="copyright lg-text">
-                    coal<span class="purple-text">canvas</span> © 2022
-                </p>
-            </div>
+
+                    <div class="col-auto connect-icon connect-icon-2 text-center" id="connect-icon">
+                        <a href='https://instagram.com/aaam3eee'>
+                            <img src='./images/gallery/icons8-instagram.gif' class='instagram' /> <br/><label class='small-text'>dm☝🏼 </label>
+                        </a>
+                    </div>
+
+                    <div class="connect-icon connect-icon-3 text-center" id="connect-icon">
+                        <a href='https://www.linkedin.com/in/amy-ngsb'>
+                            <img src='./images/gallery/linkedin-3-xxl.png' class='linkedin' /> <br/><label class='small-text'>dm☝🏼</label>
+                        </a>
+                    </div>
+
+                    <div class="connect-icon connect-icon-4 text-center" id="connect-icon">
+                        <a href='/#/contact'>
+                            <img src='./images/gallery/email.png' class='email' /> <br/><label class='small-text'>dm☝🏼✉</label>
+                        </a>
+                    </div>
+                    <p class="copyright lg-text">
+                        coal<span class="purple-text">canvas</span> © 2022
+                    </p>
+
         </footer>
-    </div>
+        </div>
 </body>
 
 </html>
