@@ -2227,7 +2227,7 @@ div>.icon-wrap {
 }
 
 .connect-icon {
-    width: 30px;
+    width: 40px;
     height: 70px;
     border-radius: 50%;
     font-family: "Fira Sans", sans-serif;
@@ -2259,7 +2259,7 @@ div>.icon-wrap {
 }
 
 .connect-icon-2 {
-    transform: translateX(20vw) scale(0.6);
+    transform: translateX(20vw) scale(0.2);
 }
 
 .connect-icon-3 {
@@ -2280,7 +2280,7 @@ div>.icon-wrap {
 }
 
 .instagram {
-    width: 70%;
+    width: 30%;
     border-radius: 50px;
     border: rgba(45, 60, 53, 0.597) 5px solid;
     height: auto;
