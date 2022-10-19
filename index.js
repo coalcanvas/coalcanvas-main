@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import * as gsap from "gsap";
+import gsap from "gsap/all";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import * as dat from "dat.gui";
 import style from "./style.css" assert { type: "css" };
