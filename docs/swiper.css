@@ -107,8 +107,8 @@ span.swiper-pagination-bullet-active {
 
 .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical>.swiper-pagination-bullets {
-    right: 15% !important;
-    top: 0% !important;
+    right: -30% !important;
+    top: -100% !important;
     transform: translate3d(-5%, 70%, 0) !important;
     display: flex !important;
     column-gap: 100px !important;
