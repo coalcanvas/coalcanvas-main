@@ -2,7 +2,6 @@ import * as THREE from "three";
 import gsap from "gsap";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // import * as dat from "dat.gui";
-import Swiper from "swiper";
 
 let className = [
   "icon ion-ios-home-outline",
