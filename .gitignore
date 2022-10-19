@@ -1,5 +1,5 @@
 node_modules
-docs
+ 
 views
 package-lock.json
 
@@ -9,6 +9,6 @@ package-lock.json
 .npmrc
  
 /node_modules
-/docs
+ 
 /views
 webpack.config.js
