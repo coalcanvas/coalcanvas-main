@@ -18,17 +18,7 @@ const windowHalf = new THREE.Vector2(
 );
 // const gui = new dat.GUI();
 // dat.GUI.toggleHide();
-// const world = {
-//   sphere: {
-//     radius: 15.662,
-//     widthSegments: 32,
-//     heightSegments: 16,
-//     phiStart: 0,
-//     phiLength: 6.283185,
-//     thetaStart: 0.565486677646163,
-//     thetaLength: 6.283185307179586,
-//   },
-// };
+
 // gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
 // gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
 // gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
@@ -37,6 +27,17 @@ const windowHalf = new THREE.Vector2(
 // gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
 // gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
 
+const world = {
+  sphere: {
+    radius: 15.662,
+    widthSegments: 32,
+    heightSegments: 16,
+    phiStart: 0,
+    phiLength: 6.283185,
+    thetaStart: 0.565486677646163,
+    thetaLength: 6.283185307179586,
+  },
+};
 function generateSphere() {
   sphereMesh.geometry.dispose();
   sphereMesh.geometry = new THREE.SphereGeometry(
