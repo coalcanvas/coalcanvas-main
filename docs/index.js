@@ -13,7 +13,6 @@ let className = [
 ];
 let labels = ["home", "focus", "timeline", "vlog", "contact", "watch"];
 var swiper = new Swiper(".swiper", {
-  // modules: [Navigation, Pagination],
   spaceBetween: 30,
   direction: "vertical",
   speed: 850,
