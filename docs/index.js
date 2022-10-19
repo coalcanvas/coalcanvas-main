@@ -1,11 +1,48 @@
 import * as THREE from "three";
+import gsap from "gsap";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-//import * as dat from "dat.gui";
-import style from "/style.css" assert { type: "css" };
-import swiperModule from "/swiper.css" assert { type: "css" };
+import * as dat from "dat.gui";
+import Swiper, { Pagination, Navigation } from "swiper";
 
-document.adoptedStyleSheet = [style];
-document.adoptedStyleSheet = [swiperModule];
+let className = [
+  "icon ion-ios-home-outline",
+  "fa-thin fa-square-bolt",
+  "fa-thin fa-toolbox",
+  "fa-thin fa-photo-film",
+  "fa-thin fa-message-middle",
+  "fa-thin fa-vr-cardboard",
+  "icon ion-ios-home-outline",
+];
+let labels = ["home", "focus", "timeline", "vlog", "contact", "watch"];
+const swiper = new Swiper(".swiper", {
+  modules: [Navigation, Pagination],
+  spaceBetween: 30,
+  direction: "vertical",
+  speed: 850,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return (
+        `
+        <span class=` +
+        className +
+        `>` +
+        labels[index] +
+        `
+      </span>`
+      );
+    },
+    loop: true,
+    watchSlidesProgress: true,
+    watchSlidesVisibility: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    scrollbar: { el: ".swiper-scrollbar" },
+  },
+});
 //THREE
 
 var scene, ray;
@@ -16,17 +53,8 @@ const windowHalf = new THREE.Vector2(
   window.innerWidth / 2,
   window.innerHeight / 2
 );
-// const gui = new dat.GUI();
-// dat.GUI.toggleHide();
-
-// gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
-// gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
-// gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
-// gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
-// gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
-// gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
-// gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
-
+const gui = new dat.GUI();
+dat.GUI.toggleHide();
 const world = {
   sphere: {
     radius: 15.662,
@@ -38,6 +66,14 @@ const world = {
     thetaLength: 6.283185307179586,
   },
 };
+gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
+gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
+gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
+gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
+gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
+gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
+gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
+
 function generateSphere() {
   sphereMesh.geometry.dispose();
   sphereMesh.geometry = new THREE.SphereGeometry(
@@ -275,7 +311,6 @@ function loadHandler(e) {
   const canvas = document.querySelector("canvas");
 
   if (target) {
-    console.log("loadd");
     let wheelEvent = new WheelEvent("wheel", {
       deltaY: 800,
       deltaMode: 0,
