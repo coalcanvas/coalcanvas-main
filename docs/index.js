@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import * as dat from "dat.gui";
+//import * as dat from "dat.gui";
 import style from "/style.css" assert { type: "css" };
 import swiperModule from "/swiper.css" assert { type: "css" };
 
@@ -16,26 +16,26 @@ const windowHalf = new THREE.Vector2(
   window.innerWidth / 2,
   window.innerHeight / 2
 );
-const gui = new dat.GUI();
-dat.GUI.toggleHide();
-const world = {
-  sphere: {
-    radius: 15.662,
-    widthSegments: 32,
-    heightSegments: 16,
-    phiStart: 0,
-    phiLength: 6.283185,
-    thetaStart: 0.565486677646163,
-    thetaLength: 6.283185307179586,
-  },
-};
-gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
-gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
-gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
-gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
-gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
-gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
-gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
+// const gui = new dat.GUI();
+// dat.GUI.toggleHide();
+// const world = {
+//   sphere: {
+//     radius: 15.662,
+//     widthSegments: 32,
+//     heightSegments: 16,
+//     phiStart: 0,
+//     phiLength: 6.283185,
+//     thetaStart: 0.565486677646163,
+//     thetaLength: 6.283185307179586,
+//   },
+// };
+// gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
+// gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
+// gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
+// gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
+// gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
 
 function generateSphere() {
   sphereMesh.geometry.dispose();
