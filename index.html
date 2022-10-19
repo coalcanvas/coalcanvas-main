@@ -297,13 +297,13 @@
     </div>
 
     <script type="module">
-        import Swiper, { Navigation, Pagination } from "swiper"; import "swiper/css"; let className = [ "icon ion-ios-home-outline", "fa-thin fa-square-bolt", "fa-thin fa-toolbox", "fa-thin fa-photo-film", "fa-thin fa-message-middle", "fa-thin fa-vr-cardboard",
-        "icon ion-ios-home-outline", ]; let labels = ["home", "focus", "timeline", "vlog", "contact", "watch"]; const swiper = new Swiper(".swiper", { modules: [Navigation, Pagination], spaceBetween: 30, direction: "vertical", speed: 850, pagination:
-        { el: ".swiper-pagination", clickable: true, renderBullet: function (index, className) { return ( `
+        import Swiper, { Navigation, Pagination, } from "swiper" assert { type: "css" }; import "swiper/css" assert { type: "css" }; document.adoptedStyleSheet = [Swiper, { Navigation, Pagination }]; let className = [ "icon ion-ios-home-outline", "fa-thin fa-square-bolt",
+        "fa-thin fa-toolbox", "fa-thin fa-photo-film", "fa-thin fa-message-middle", "fa-thin fa-vr-cardboard", "icon ion-ios-home-outline", ]; let labels = ["home", "focus", "timeline", "vlog", "contact", "watch"]; const swiper = new Swiper(".swiper",
+        { modules: [Navigation, Pagination], spaceBetween: 30, direction: "vertical", speed: 850, pagination: { el: ".swiper-pagination", clickable: true, renderBullet: function (index, className) { return ( `
         <span class=` + className + `>` +
               labels[index] +
               `
-          </span>` ); }, loop: true, watchSlidesProgress: true, watchSlidesVisibility: true, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", }, scrollbar: { el: ".swiper-scrollbar" }, }, });
+        </span>` ); }, loop: true, watchSlidesProgress: true, watchSlidesVisibility: true, navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", }, scrollbar: { el: ".swiper-scrollbar" }, }, });
     </script>
 </body>
 
