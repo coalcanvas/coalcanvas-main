@@ -8,7 +8,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>3️⃣js</title>
+    <title>coalcanvas</title>
     <style>
         body {
             overflow: hidden;
@@ -24,17 +24,21 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/swiper.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.js" integrity="sha512-k2o1KZdvUi59PUXirfThShW9Gdwtk+jVYum6t7RmyCNAVyF9ozijFpvLEWmpgqkHuqSWpflsLf5+PEW6Lxy/wA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.js" integrity="sha512-u+vtyZDzyd0zgAEffKfoNx2BnCahAOBBYvzGu6vma1B18zQ6lEGF3F6dAFvqaxDoIU/GZRxcXV5oq23OIrkQwg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js" integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script type="importmap">
         { "imports": { "three": "https://unpkg.com/three@0.144.0/build/three.module.js", "gsap": "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js", "three/examples/jsm/controls/OrbitControls": "https://unpkg.com/three@0.144.0/examples/jsm/controls/OrbitControls.js",
-        "swiper": "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.esm.browser.js.map", "dat.gui": "https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js" } }
+        "swiper": "https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.esm.browser.js.map", "dat.gui": "https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.js" } }
     </script>
 
-    <script type="module" src="/index.js"></script>
+    <script defer type="module" src="/index.js"></script>
 </head>
 
 <body>
@@ -297,7 +301,7 @@
         </footer>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.min.css" type="module">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.4/swiper-bundle.esm.browser.js" type="module">
         import Swiper from "swiper"; let className = [ "icon ion-ios-home-outline", "fa-thin fa-square-bolt", "fa-thin fa-toolbox", "fa-thin fa-photo-film", "fa-thin fa-message-middle", "fa-thin fa-vr-cardboard", "icon ion-ios-home-outline", ]; let labels = ["home",
         "focus", "timeline", "vlog", "contact", "watch"]; const swiper = new Swiper(".swiper", { modules: [Navigation, Pagination], spaceBetween: 30, direction: "vertical", speed: 850, pagination: { el: ".swiper-pagination", clickable: true, renderBullet:
         function (index, className) { return ( `
