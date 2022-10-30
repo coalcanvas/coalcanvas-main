@@ -1,50 +1,12 @@
+import "/style.css";
+import "/swiper.css";
+import "/swiper.js";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // import * as dat from "dat.gui";
 
 ("use strict");
-let className = [
-  "icon ion-ios-home-outline",
-  "fa-thin fa-square-bolt",
-  "fa-thin fa-toolbox",
-  "fa-thin fa-photo-film",
-  "fa-thin fa-message-middle",
-  "fa-thin fa-vr-cardboard",
-  "icon ion-ios-home-outline",
-];
-let labels = ["home", "products", "timeline", "book", "connect", "reel"];
-var swiper = new Swiper(".swiper", {
-  spaceBetween: 30,
-  direction: "vertical",
-  speed: 850,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    renderBullet: function (index, className) {
-      return (
-        `
-        <span class=` +
-        className +
-        `>` +
-        labels[index] +
-        `
-      </span>`
-      );
-    },
-    parallax: true,
-    loop: true,
-    observer: true,
-    observeParents: true,
-    watchSlidesProgress: true,
-    watchSlidesVisibility: true,
-    allowSlidePrev: false,
-    navigation: {
-      prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-prev",
-    },
-    scrollbar: { el: ".swiper-scrollbar" },
-  },
-});
+
 //THREE
 
 var scene, ray;
@@ -92,7 +54,7 @@ function generateSphere() {
   // vertice position randomization
   var { array } = sphereMesh.geometry.attributes.position;
   var randomValues = [];
-  for (let i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     if (i % 3 === 0) {
       var x = array[i];
       var y = array[i + 1];
@@ -111,7 +73,7 @@ function generateSphere() {
     sphereMesh.geometry.attributes.position.array;
 
   var colors = [];
-  for (let i = 0; i < sphereMesh.geometry.attributes.position.count; i++) {
+  for (var i = 0; i < sphereMesh.geometry.attributes.position.count; i++) {
     colors.push(0, 0.19, 0.4);
   }
 
@@ -184,13 +146,13 @@ var starGeometry = new THREE.BufferGeometry();
 var starMaterial = new THREE.PointsMaterial({
   color: 0xe5e5e5,
   //specular: 0xffffff,
-  shininess: 500,
+  //shininess: 500,
   // vertexColors: true,
   // transparent: false,
 });
 
 var starVertices = [];
-for (let i = 0; i < 10000; i++) {
+for (var i = 0; i < 10000; i++) {
   var x = (Math.random() - 0.5) * 2000;
   var y = (Math.random() - 0.5) * 2000;
   var z = (Math.random() - 0.5) * 2000;
@@ -221,7 +183,7 @@ var mouse = new THREE.Vector3({
   z: 50,
 });
 
-let frame = 0;
+var frame = 0;
 //console.log(camera.position);
 
 //Listeners
@@ -247,12 +209,12 @@ window.addEventListener("load", loadHandler, false);
 function loadHandler(e) {
   var target = document.querySelector("canvas");
 
-  if (document.readyState === "complete") {
-    let wheelEvent = new WheelEvent("wheel", {
+  if (document.readyState === "compvare") {
+    var wheelEvent = new WheelEvent("wheel", {
       deltaY: 100,
       deltaMode: 0,
     });
-    let clickEvent = new Event("click");
+    var clickEvent = new Event("click");
     target.dispatchEvent(wheelEvent);
     target.dispatchEvent(clickEvent);
 
@@ -303,7 +265,7 @@ function exploreBtn(e) {
       ease: "power4.in",
       duration: 3,
       delay: 1,
-      onComplete: () => {
+      onCompvare: () => {
         window.location = "https://coalcanvas.github.io";
       },
     });
@@ -377,7 +339,7 @@ function animate() {
 
   var { array, originalPosition, randomValues } =
     sphereMesh.geometry.attributes.position;
-  for (let i = 0; i < array.length; i += 3) {
+  for (var i = 0; i < array.length; i += 3) {
     // x
     array[i] = originalPosition[i] + Math.cos(frame + randomValues[i]) * 0.01;
 
