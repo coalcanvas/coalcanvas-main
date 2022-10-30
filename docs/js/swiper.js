@@ -57,44 +57,42 @@ div.swiper {
 
 @keyframes s-appear {
     0% {
-        opacity: 0 !important;
-        visibility: hidden !important;
+        opacity: 0.05 !important;
+        visibility: visible !important;
+        transform: translateZ(-6.7rem) translateY(0px) !important;
+        -webkit-transform: translateZ(-6.7rem) translateY(0px) !important;
     }
     25% {
         opacity: 0.05 !important;
         visibility: visible !important;
     }
     50% {
-        opacity: 0.15 !important;
+        opacity: 0.05 !important;
     }
     95% {
-        opacity: 0.25 !important;
+        opacity: 0.05 !important;
     }
     100% {
-        opacity: 1 !important;
+        opacity: 0.01 !important;
         visibility: visible !important;
+        transform: translateZ(-6.7rem) translateY(1400px) !important;
+        -webkit-transform: translateZ(-6.7rem) translateY(1400px) !important;
     }
-}
-
-.parallax-bg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 130%;
-    height: 100%;
-    -webkit-background-size: cover;
-    background-size: cover;
-    background-position: center;
 }
 
 .swiper-wrapper {
     transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
+    -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
+    -moz-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
+    z-index: 2;
 }
 
 .swiper-slide {
-    opacity: 0.25 !important;
+    opacity: 0.15 !important;
     text-align: center;
-    transform: translateZ(20px) scale(0.95) opacity;
+    transform: translateZ(20px) translateY(1400) scale(0.95) opacity !important;
+    -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
+    -webkit-transform: translateZ(20px) translateY(1400) scale(0.95) opacity !important;
     transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
     animation: s-appear 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
     -webkit-animation: s-appear 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
@@ -125,19 +123,32 @@ div.swiper {
 .swiper-slide-prev {
     opacity: 0 !important;
     transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
+    -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
     transition-delay: 800ms !important;
+    -webkit-transition-delay: 800ms !important;
+    transform: translateZ(-6.7rem) translateY(1400px) !important;
+    -webkit-transform: translateZ(-6.7rem) translateY(1400px) !important;
 }
 
 .swiper-slide-next {
     opacity: 0 !important;
+    direction: vertical-rl !important;
     transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
-    transition-delay: 800ms !important;
+    transition-delay: 0ms !important;
+    -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
+    -webkit-transition-delay: 0ms !important;
+    transform: translateZ(-6.7rem) translateY(1400px) !important;
+    -webkit-transform: translateZ(-6.7rem) translateY(1400px) !important;
 }
 
 .swiper-slide-active {
     opacity: 1 !important;
+    transform: translateY(0) !important;
+    -webkit-transform: translateY(0) !important;
     transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
     transition-delay: 800ms !important;
+    -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
+    -webkit-transition-delay: 800ms !important;
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
@@ -167,14 +178,14 @@ div.swiper {
 
 span.swiper-pagination-bullet-active {
     opacity: var(--swiper-pagination-bullet-inactive-opacity, 1) !important;
-    color: #151516 !important;
+    color: #6aa9e1 !important;
     background: var(--swiper-theme-color, #1515161c) !important;
 }
 
 .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical>.swiper-pagination-bullets {
-    right: 15% !important;
-    top: 0% !important;
+    right: -30% !important;
+    top: -100% !important;
     transform: translate3d(-5%, 70%, 0) !important;
     display: flex !important;
     column-gap: 100px !important;
@@ -186,8 +197,8 @@ span.swiper-pagination-bullet-active {
 @media screen and (max-width: 575px) {
     .swiper-pagination-vertical.swiper-pagination-bullets,
     .swiper-vertical>.swiper-pagination-bullets {
-        right: 49% !important;
-        top: 0% !important;
+        right: 0% !important;
+        top: -100% !important;
         transform: translate3d(-5%, 70%, 0) !important;
         display: flex !important;
         column-gap: 35px !important;
@@ -198,13 +209,12 @@ span.swiper-pagination-bullet-active {
     }
     div.menu,
     div.menu.active {
-        transform: scale(0.2) !important;
-        top: -7.5% !important;
-        right: -8% !important;
+        transform: scale(0.25) !important;
+        top: 0% !important;
+        right: -5% !important;
     }
 }
 
-//menu
 svg {
     transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }

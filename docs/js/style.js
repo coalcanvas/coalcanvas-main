@@ -1,4 +1,9 @@
-.cinematic-t {
+window.onload = loadCss();
+function loadCss() {
+  var linkz = document.createElement("style");
+  linkz.innerHTML = `
+  
+  .cinematic-t {
     z-index: 5;
     position: fixed;
     background: #000000;
@@ -1895,4 +1900,10 @@ a:hover {
     filter: contrast(50%);
     background-color: #fffffff0;
     padding: 5px;
+}
+
+
+
+`;
+  document.head.appendChild(linkz);
 }
