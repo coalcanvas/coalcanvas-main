@@ -1,25 +1,24 @@
 import * as THREE from "three";
-import gsap from "gsap";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import * as dat from "dat.gui";
-import style from "/style.css" assert { type: "css" };
-import swiperModule from "/swiper.css" assert { type: "css" };
+import "/js/swiper.js";
+import "/js/style.js";
+// import * as dat from "dat.gui";
 
-document.adoptedStyleSheet = [style];
-document.adoptedStyleSheet = [swiperModule];
+("use strict");
+
 //THREE
 
 var scene, ray;
 var geometry, material, mesh, camera, quarter;
 var sphere;
 
-const windowHalf = new THREE.Vector2(
+var windowHalf = new THREE.Vector2(
   window.innerWidth / 2,
   window.innerHeight / 2
 );
-const gui = new dat.GUI();
-dat.GUI.toggleHide();
-const world = {
+// var gui = new dat.GUI();
+// dat.GUI.toggleHide();
+var world = {
   sphere: {
     radius: 15.662,
     widthSegments: 32,
@@ -30,13 +29,13 @@ const world = {
     thetaLength: 6.283185307179586,
   },
 };
-gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
-gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
-gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
-gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
-gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
-gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
-gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
+// gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
+// gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
+// gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
+// gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
+// gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
 
 function generateSphere() {
   sphereMesh.geometry.dispose();
@@ -52,13 +51,13 @@ function generateSphere() {
 
   // sphereMesh.quaternion.x = (1.4 * Math.PI) / 2;
   // vertice position randomization
-  const { array } = sphereMesh.geometry.attributes.position;
-  const randomValues = [];
-  for (let i = 0; i < array.length; i++) {
+  var { array } = sphereMesh.geometry.attributes.position;
+  var randomValues = [];
+  for (var i = 0; i < array.length; i++) {
     if (i % 3 === 0) {
-      const x = array[i];
-      const y = array[i + 1];
-      const z = array[i + 2];
+      var x = array[i];
+      var y = array[i + 1];
+      var z = array[i + 2];
 
       array[i] = x + (Math.random() - 0.5) * 3;
       array[i + 1] = y + (Math.random() - 0.5) * 3;
@@ -72,8 +71,8 @@ function generateSphere() {
   sphereMesh.geometry.attributes.position.originalPosition =
     sphereMesh.geometry.attributes.position.array;
 
-  const colors = [];
-  for (let i = 0; i < sphereMesh.geometry.attributes.position.count; i++) {
+  var colors = [];
+  for (var i = 0; i < sphereMesh.geometry.attributes.position.count; i++) {
     colors.push(0, 0.19, 0.4);
   }
 
@@ -82,20 +81,25 @@ function generateSphere() {
     new THREE.BufferAttribute(new Float32Array(colors), 3)
   );
 }
-
+var app = document.querySelector("#tjs");
 ray = new THREE.Raycaster();
 scene = new THREE.Scene();
-scene.background = new THREE.Color("hsla(258, 16%, 7%, 0.7)");
-camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, 0.1, 1500);
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+scene.background = new THREE.Color("hsla(159, 6%, 12%, 1)");
+camera = new THREE.PerspectiveCamera(
+  75,
+  window.innerWidth / window.innerHeight,
+  0.1,
+  1000
+);
+var renderer = new THREE.WebGLRenderer({ antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(devicePixelRatio);
-document.body.append(renderer.domElement);
+renderer.setPixelRatio(window.devicePixelRatio);
+app.append(renderer.domElement);
 
-const controls = new OrbitControls(camera, renderer.domElement);
+var controls = new OrbitControls(camera, renderer.domElement);
 
-camera.position.z = 10.5;
+camera.position.z = 100;
 
 //console.log(camera.position);
 controls.enableDamping = true;
@@ -107,7 +111,7 @@ controls.rotateSpeed = 0.25;
 camera.updateProjectionMatrix();
 controls.update();
 
-const sphereGeometry = new THREE.SphereGeometry(
+var sphereGeometry = new THREE.SphereGeometry(
   world.sphere.radius,
   world.sphere.widthSegments,
   world.sphere.heightSegments,
@@ -117,40 +121,40 @@ const sphereGeometry = new THREE.SphereGeometry(
   world.sphere.thetaLength
 );
 
-const sphereMaterial = new THREE.MeshPhongMaterial({
+var sphereMaterial = new THREE.MeshBasicMaterial({
+  color: 0x220000,
   opacity: 0.6,
   side: THREE.DoubleSide,
-  flatShading: THREE.FlatShading,
   vertexColors: true,
   wireframe: false,
 });
-const sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
+var sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphereMesh);
 //sphereMesh.rotation.y = 1.57;
 generateSphere();
 
-const light = new THREE.DirectionalLight(0xffffff, 1);
+var light = new THREE.DirectionalLight(0xffffff, 1);
 light.position.set(0, -1, 1);
 scene.add(light);
 
-const backLight = new THREE.DirectionalLight(0xffffff, 1);
+var backLight = new THREE.DirectionalLight(0xffffff, 1);
 backLight.position.set(0, 0, -1);
 scene.add(backLight);
 
-const starGeometry = new THREE.BufferGeometry();
-const starMaterial = new THREE.PointsMaterial({
-  color: 0x7f00ff,
+var starGeometry = new THREE.BufferGeometry();
+var starMaterial = new THREE.PointsMaterial({
+  color: 0xe5e5e5,
   //specular: 0xffffff,
-  shininess: 500,
+  //shininess: 500,
   // vertexColors: true,
   // transparent: false,
 });
 
-const starVertices = [];
-for (let i = 0; i < 10000; i++) {
-  const x = (Math.random() - 0.5) * 2000;
-  const y = (Math.random() - 0.5) * 2000;
-  const z = (Math.random() - 0.5) * 2000;
+var starVertices = [];
+for (var i = 0; i < 10000; i++) {
+  var x = (Math.random() - 0.5) * 2000;
+  var y = (Math.random() - 0.5) * 2000;
+  var z = (Math.random() - 0.5) * 2000;
   starVertices.push(x, y, z);
 }
 
@@ -164,49 +168,81 @@ starGeometry.setAttribute(
 //console.log(starGeometry);
 //console.log(starMaterial);
 
-const stars = new THREE.Points(starGeometry, starMaterial);
+var stars = new THREE.Points(starGeometry, starMaterial);
 scene.add(stars);
 
-const target = new THREE.Vector3({
+var target = new THREE.Vector3({
   x: 0.896,
   y: 0.794,
   z: -10,
 });
-const mouse = new THREE.Vector3({
+var mouse = new THREE.Vector3({
   x: 0,
   y: 0,
   z: 50,
 });
 
-let frame = 0;
+var frame = 0;
 //console.log(camera.position);
 
 //Listeners
-const hamburger_menu = document.querySelector(".menu");
-const container = document.querySelector(".swiper-pagination");
+var hamburger_menu = document.querySelector(".menu");
+var cinema = document.querySelector(".cinematic-t");
+var cinema2 = document.querySelector(".cinematic-b");
+var container = document.querySelector(".swiper-pagination");
 hamburger_menu.addEventListener("click", () => {
   container.classList.toggle("menu-active");
+  cinema.classList.toggle("hide-t");
+  cinema2.classList.toggle("hide-t");
 });
-const btn = document.querySelector("#explore-button");
+
+var btn = document.querySelector("#explore-button");
 btn.addEventListener("click", exploreBtn, false);
-window.addEventListener("load", loadHandler, 1200);
+
 document.addEventListener("mousemove", onMouseMove, false);
 document.addEventListener("onmousedown", onMouseDown, false);
 document.addEventListener("wheel", onMouseWheel, false);
 window.addEventListener("resize", onResize, false);
+window.addEventListener("load", loadHandler, false);
+
+function loadHandler(e) {
+  var target = document.querySelector("canvas");
+
+  if (document.readyState === "compvare") {
+    var wheelEvent = new WheelEvent("wheel", {
+      deltaY: 100,
+      deltaMode: 0,
+    });
+    var clickEvent = new Event("click");
+    target.dispatchEvent(wheelEvent);
+    target.dispatchEvent(clickEvent);
+
+    console.log(wheelEvent);
+    console.log(clickEvent);
+  }
+}
+
+var x = 5;
+var y = 300;
+
+var interval = 3000;
+
+for (var i = 0; i < x; i++) {
+  setTimeout(loadHandler, i * interval);
+}
 
 //functions
 function exploreBtn(e) {
   e.preventDefault();
 
   var target = e.target;
-  const app = document.querySelector("#app");
+  var app = document.querySelector("#app");
 
   if (target) {
     /* camera.rotation.x += 1.57;
 
-    camera.position.z = 25;
-    camera.updateMatrixWorld(); */
+                    camera.position.z = 25;
+                    camera.updateMatrixWorld(); */
 
     gsap.to(camera.position, {
       z: 15,
@@ -228,7 +264,7 @@ function exploreBtn(e) {
       ease: "power4.in",
       duration: 3,
       delay: 1,
-      onComplete: () => {
+      onCompvare: () => {
         window.location = "https://coalcanvas.github.io";
       },
     });
@@ -256,44 +292,36 @@ function onMouseMove(e) {
 }
 
 function onMouseDown(e) {
+  e.preventDefault();
   mouse.x = (e.clientX / innerWidth) * 2 - 1;
   mouse.y = -(e.clientY / innerHeight) * 2 + 1;
+  console.log(mouse.y);
 }
 
 function onMouseWheel(e) {
-  console.log(window.innerHeight);
-  // var target = e.target;
-  // const canvas = document.querySelector("canvas");
+  var bod = document.querySelector("#app");
+  var target = e.target;
+
+  // var canvas = document.querySelector("canvas");
 
   console.log(camera.position);
+  //console.log(bod.offsetY);
+
   camera.position.z += e.deltaY * 0.1; // move camera along z-axis
 }
 
-function loadHandler(e) {
-  var target = e.target;
-
-  const canvas = document.querySelector("canvas");
-
-  if (target) {
-    console.log("loadd");
-    let wheelEvent = new WheelEvent("wheel", {
-      deltaY: 800,
-      deltaMode: 0,
-    });
-
-    canvas.dispatchEvent(wheelEvent);
-  }
-}
-
 function onResize(e) {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-
+  var app = renderer.domElement;
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var needResize = app.width !== width || app.height !== height;
   windowHalf.set(width / 2, height / 2);
 
-  camera.aspect = width / height;
+  camera.aspect = app.width / app.height;
   camera.updateProjectionMatrix();
-  renderer.setSize(width, height);
+  if (needResize) {
+    renderer.setSize(width, height);
+  }
 }
 
 function animate() {
@@ -308,9 +336,9 @@ function animate() {
   ray.setFromCamera(target, camera);
   frame += 0.01;
 
-  const { array, originalPosition, randomValues } =
+  var { array, originalPosition, randomValues } =
     sphereMesh.geometry.attributes.position;
-  for (let i = 0; i < array.length; i += 3) {
+  for (var i = 0; i < array.length; i += 3) {
     // x
     array[i] = originalPosition[i] + Math.cos(frame + randomValues[i]) * 0.01;
 
@@ -322,9 +350,9 @@ function animate() {
   sphereMesh.geometry.attributes.position.needsUpdate = true;
   renderer.render(scene, camera);
 
-  const intersects = ray.intersectObject(sphereMesh);
+  var intersects = ray.intersectObject(sphereMesh);
   if (intersects.length > 0) {
-    const { color } = intersects[0].object.geometry.attributes;
+    var { color } = intersects[0].object.geometry.attributes;
 
     // vertice 1
     color.setX(intersects[0].face.a, 0.1);
@@ -343,13 +371,13 @@ function animate() {
 
     intersects[0].object.geometry.attributes.color.needsUpdate = true;
 
-    const initialColor = {
+    var initialColor = {
       r: 0.6,
       g: 0,
       b: 1,
     };
 
-    const hoverColor = {
+    var hoverColor = {
       r: 0.3,
       g: 0,
       b: 1,
@@ -385,9 +413,9 @@ function animate() {
 animate();
 
 //contact form
-const YOUR_PUBLIC_KEY = "OELFukrApYjYBWuwP";
-const contact_service = "service_f11zj7x";
-const contact_form = "template_zoh9myc";
+var YOUR_PUBLIC_KEY = "OELFukrApYjYBWuwP";
+var contact_service = "service_f11zj7x";
+var contact_form = "template_zoh9myc";
 (function () {
   // https://dashboard.emailjs.com/admin/account
   emailjs.init(YOUR_PUBLIC_KEY);

@@ -3,7 +3,7 @@ node_modules
 views
 package-lock.json
 
-
+sphere.js
 .env
  
 .npmrc
@@ -12,3 +12,6 @@ package-lock.json
  
 /views
 webpack.config.js
+style.css
+swiper.css
+index.html

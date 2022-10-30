@@ -1,17 +1,20 @@
 # Minimal Dependency Three.js Project
 
-## Setup
+## Notes
 
-Download [Node.js](https://nodejs.org/en/download/).
-Run this followed commands:
+The purpose of the app is to as much as possible try to 'gamify' the platform.
 
-```bash
-# Install dependencies (only the first time)
-npm install
+Getting better at Threejs thanks to tutorials from Udemy instructors like Christopher Lis. Excited to follow his next lesson on inserting data-points onto the THREE objects, since i come from the data industry.
 
-# Run the local server at localhost:8080
-npm run dev
+Experimenting with single-page application. Site is loading right with fast LCP.
 
-# Build for production in the dist/ directory
-npm run build
+Don't understand the value of Sass or LESS, therefore PostCSS.
+
+Found bundling setup to be ultra tedious, may want to try rollup as the setup for webpack is complicated for me, and the changing syntax wasn't helpful.
+Couldn't solve the errors even while following documentation.
+
+May want to try Rollup after finding a pretty comprehensive tutorial from Jason Lengstorf@Netlify.
+
+```
+
 ```
