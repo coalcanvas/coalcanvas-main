@@ -1,7 +1,8 @@
+import "/style.css";
+import "/swiper.css";
+import "/swiper.js";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import "/js/swiper.js";
-import "/js/style.js";
 // import * as dat from "dat.gui";
 
 ("use strict");
