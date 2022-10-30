@@ -242,6 +242,33 @@ document.addEventListener("mousemove", onMouseMove, false);
 document.addEventListener("onmousedown", onMouseDown, false);
 document.addEventListener("wheel", onMouseWheel, false);
 window.addEventListener("resize", onResize, false);
+window.addEventListener("load", loadHandler, false);
+
+function loadHandler(e) {
+  var target = document.querySelector("canvas");
+
+  if (document.readyState === "complete") {
+    let wheelEvent = new WheelEvent("wheel", {
+      deltaY: 100,
+      deltaMode: 0,
+    });
+    let clickEvent = new Event("click");
+    target.dispatchEvent(wheelEvent);
+    target.dispatchEvent(clickEvent);
+
+    console.log(wheelEvent);
+    console.log(clickEvent);
+  }
+}
+
+var x = 5;
+var y = 300;
+
+var interval = 3000;
+
+for (var i = 0; i < x; i++) {
+  setTimeout(loadHandler, i * interval);
+}
 
 //functions
 function exploreBtn(e) {
