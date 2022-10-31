@@ -185,7 +185,7 @@ span.swiper-pagination-bullet-active {
 .swiper-pagination-vertical.swiper-pagination-bullets,
 .swiper-vertical>.swiper-pagination-bullets {
     right: -30% !important;
-    top: -100% !important;
+    top: -103% !important;
     transform: translate3d(-5%, 70%, 0) !important;
     display: flex !important;
     column-gap: 100px !important;
@@ -198,7 +198,7 @@ span.swiper-pagination-bullet-active {
     .swiper-pagination-vertical.swiper-pagination-bullets,
     .swiper-vertical>.swiper-pagination-bullets {
         right: 0% !important;
-        top: -100% !important;
+        top: -106% !important;
         transform: translate3d(-5%, 70%, 0) !important;
         display: flex !important;
         column-gap: 35px !important;
@@ -210,7 +210,7 @@ span.swiper-pagination-bullet-active {
     div.menu,
     div.menu.active {
         transform: scale(0.25) !important;
-        top: 0% !important;
+        top: -6% !important;
         right: -5% !important;
     }
 }
