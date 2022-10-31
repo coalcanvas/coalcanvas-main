@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>coaloncanvas</title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,height=device-height initial-scale=1,minimum-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -65,8 +65,7 @@
         })(window, document, "script", "dataLayer", "GTM-W2HBC2X");
     </script>
     <!-- End Google Tag Manager -->
-    <script src="/js/style.js"></script>
-    <script src="/js/swiper.js"></script>
+
     <script defer type="module" src="/js/main.js"></script>
 </head>
 
@@ -83,6 +82,12 @@
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <div class="app">
+        <div id="hands" index="0" class="'swipe-icon d-inline-block">
+            <p id="hands" index="1" class="swipe-icon grey-text small-text pt-5 pl-5">
+                swipe up
+            </p>
+            <img id="hands" index="2" class="swipe-icon hand" src="/images/hand-right-outline.svg" alt="" />
+        </div>
         <div class="menu" style="
           display: inline-block;
           top: 0%;
@@ -138,8 +143,8 @@
                     <div id="tjs">
                         <div id="explore-button" class="xxlg-text text-center button1 isomorph-o p-2 w-50" style="transform: translate(50%, 100%)">
                             <hr />
-                            <h1 class="c-title p-2" style="letter-spacing: 1rem" data-swiper-parallax="-300">
-                                COALONCANVAS
+                            <h1 class="c-title p-2 small-text" style="letter-spacing: 0.5rem" data-swiper-parallax="-300">
+                                COALonCANVAS
                             </h1>
                             <hr />
                             <p data-swiper-parallax="-100">fun • curious • innovative</p>
@@ -178,7 +183,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="centered">DIGITAL PRESENCE + FUN</h2>
+                            <h2 class="centered small-text">DIGITAL PRESENCE + FUN</h2>
                         </div>
 
                         <div class="flip-card">
@@ -200,7 +205,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="centered">GO PAPERLESS!</h2>
+                            <h2 class="centered small-text">GO PAPERLESS!</h2>
                         </div>
 
                         <div class="flip-card">
@@ -222,7 +227,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="centered">MONEY MATTERS</h2>
+                            <h2 class="centered small-text">MONEY MATTERS</h2>
                         </div>
 
                         <div class="flip-card">
@@ -244,7 +249,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="centered">DELIGHT YOUR USERS</h2>
+                            <h2 class="centered small-text">DELIGHT YOUR USERS</h2>
                         </div>
                     </section>
                     <div style="position: absolute; left: 45vw; bottom: 22vh; z-index: 20">
@@ -253,8 +258,8 @@
               </a>
                     </div>
                 </div>
-                <div class="swiper-slide d-flex row xlg-text" id="tline" onscroll="startTimer()">
-                    <div class="isomorph-o card w-50 p-1 small-text">
+                <div class="swiper-slide d-flex row xlg-text" id="tline" style="transform: translate(0, -123px) !important">
+                    <div class="isomorph-o card w-50 p-1 small-text mt-4">
                         <p>
                             My experience spans traditional to digital as well as experience advertising and branding to a global audience.
                         </p>
@@ -315,8 +320,14 @@
                   position: relative;
                   display: block;
                 ">
-                            <h2 class="bold-text">REC <span></span></h2>
-                            <p><span id="seconds">00</span>:<span id="tens">00</span></p>
+                            <h2 class="d-inline-block bold-text" style="position: absolute; right: 0">
+                                REC
+                                <span class="dot"><svg height="20" width="20" class="dot blinking">
+                      <circle cx="10" cy="10" r="10" fill="red" />
+                      Sorry, your browser does not support inline SVG.
+                    </svg>
+                  </span>
+                            </h2>
                         </div>
                     </div>
                 </div>
