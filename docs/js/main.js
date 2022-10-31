@@ -1,4 +1,4 @@
-import "./swiper.js";
+ 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // import * as dat from "dat.gui";
