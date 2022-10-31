@@ -11,7 +11,7 @@ var labels = ["home", "products", "timeline", "book", "connect", "reel"];
 var swiper = new Swiper(".swiper", {
   spaceBetween: 30,
   direction: "vertical",
-  speed: 850,
+  speed: 1600,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -35,7 +35,7 @@ var swiper = new Swiper(".swiper", {
     allowSlidePrev: false,
     navigation: {
       prevEl: ".swiper-button-prev",
-      nextEl: ".swiper-button-prev",
+      nextEl: ".swiper-button-next",
     },
     scrollbar: { el: ".swiper-scrollbar" },
   },
@@ -59,8 +59,8 @@ div.swiper {
     0% {
         opacity: 0.05 !important;
         visibility: visible !important;
-        transform: translateZ(-6.7rem) translateY(0px) !important;
-        -webkit-transform: translateZ(-6.7rem) translateY(0px) !important;
+    transform: translate3d(0, 0, 0) !important;
+        -webkit-transform: translate3d(0, 0, 0) !important;
     }
     25% {
         opacity: 0.05 !important;
@@ -75,8 +75,8 @@ div.swiper {
     100% {
         opacity: 0.01 !important;
         visibility: visible !important;
-        transform: translateZ(-6.7rem) translateY(1400px) !important;
-        -webkit-transform: translateZ(-6.7rem) translateY(1400px) !important;
+        transform: translate3d(0, 0, 30rem) !important;
+        -webkit-transform: translate3d(0, 0, 30rem) !important;
     }
 }
 
@@ -90,21 +90,6 @@ div.swiper {
 .swiper-slide {
     opacity: 0.15 !important;
     text-align: center;
-    transform: translateZ(20px) translateY(1400) scale(0.95) opacity !important;
-    -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
-    -webkit-transform: translateZ(20px) translateY(1400) scale(0.95) opacity !important;
-    transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
-    animation: s-appear 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
-    -webkit-animation: s-appear 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
-    -moz-animation: s-appear 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
-    -o-animation: s-appear 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
-    animation: s-appear 800ms cubic-bezier(0, 0.86, 0.55, 0.72);
-    animation-play-state: paused;
-    -webkit-animation-play-state: paused;
-    -o-animation-fill-mode: alternate;
-    animation-fill-mode: alternate;
-    -moz-animation-fill-mode: alternate;
-    -webkit-animation-fill-mode: alternate;
     /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -126,8 +111,8 @@ div.swiper {
     -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
     transition-delay: 800ms !important;
     -webkit-transition-delay: 800ms !important;
-    transform: translateZ(-6.7rem) translateY(1400px) !important;
-    -webkit-transform: translateZ(-6.7rem) translateY(1400px) !important;
+    transform: translate3d(0, 0, 3rem) !important;
+    -webkit-transform: translate3d(0, 0, 3rem) !important;
 }
 
 .swiper-slide-next {
@@ -137,8 +122,8 @@ div.swiper {
     transition-delay: 0ms !important;
     -webkit-transition: all 800ms cubic-bezier(0, 0.86, 0.55, 0.72) !important;
     -webkit-transition-delay: 0ms !important;
-    transform: translateZ(-6.7rem) translateY(1400px) !important;
-    -webkit-transform: translateZ(-6.7rem) translateY(1400px) !important;
+    transform: translate3d(0, 0, 3rem) !important;
+    -webkit-transform: translate3d(0, 0, 3rem) !important;
 }
 
 .swiper-slide-active {
