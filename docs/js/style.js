@@ -1,4 +1,5 @@
 window.onload = loadCss();
+
 function loadCss() {
   var linkz = document.createElement("style");
   linkz.innerHTML = `
@@ -20,6 +21,7 @@ function loadCss() {
     -ms-transition: max-height 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transition: max-height 0.6s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
+
 
 .hide-t {
     max-height: 0px !important;
@@ -238,7 +240,13 @@ div.t-container-ocean {
         font-size: normal !important;
         letter-spacing: 1rem !important;
     }
- 
+ #explore-button {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    min-width: 250px; 
+    transform: translate(0%, 0%)
+}
     body {
         height: 100vh !important;
     }
@@ -555,6 +563,13 @@ h1 {
  right: 18px !important;
     bottom: 13px !important;
     }
+     #explore-button {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    min-width: 250px; 
+    transform: translate(0%, 0%)
+}
         [data-tooltip-location="left"]:before,
     [data-tooltip-location="left"]:after {
         left: -50%;
@@ -588,7 +603,7 @@ h1 {
         left: 90px !important;
     }
     div.timeline.container {
-           transform: translate(0px, -100px) !important;
+           transform: translate(0px, -70px) !important;
     }
     .t-container {
         width: 100%;
@@ -664,7 +679,7 @@ h1 {
     padding: 20px;
     }
     .isomorph-o.card {
-    transform: translate(0px, 0px) !important;  
+    transform: translate(0px, 55px) !important;
 }
     .grid-container {
         grid-template-columns: 10px repeat(6, 1fr) 10px;
@@ -1355,7 +1370,95 @@ section.slide {
 .dot.blinking {
      animation: blink 2s infinite;
 }
+.pulsating-circle {
+    position: absolute;
+    left: 15%;
+    bottom: 5%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 15px;
+    height: 15px;
+    z-index: 9;
+}
+  .pulsating-circle:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 300%;
+    height: 300%;
+    box-sizing: border-box;
+    margin-left: -100%;
+    margin-top: -100%;
+    border-radius: 45px;
+    background-color: #656565bb;
+    animation: pulse-ring 1.5s alternate cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    animation-play-state: running;
+      -webkit-animation: pulse-ring 1.5s alternate cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    -webkit-animation-play-state: running;
+  }
+  .pulsating-circle.pause:before,.pulsating-circle.pause:before {
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+  }
+  
+.pulsating-circle:after {
+    content: '';
+    position: absolute;
+    left: 0; 
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #7357ed;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+        animation: pulse-ring 1.5s alternate cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    animation-play-state: running;
+      -webkit-animation: pulse-ring 1.5s alternate cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    -webkit-animation-play-state: running;
+  }
+ 
 
+@keyframes pulse-ring {
+  0% {
+    transform: scale(.33);
+  }
+  80%, 100% {
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes pulse-ring {
+  0% {
+    -webkit-transform: scale(.33);
+  }
+  80%, 100% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(.8);
+  }
+}
+
+@-webkit-keyframes pulse-dot  {
+  0% {
+    -webkit-transform: scale(.8);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(.8);
+  }
+}
 
 @keyframes "blink" {
   from, to {
@@ -1365,7 +1468,7 @@ section.slide {
     opacity: 1;
   }
 }
-
+ 
 @-moz-keyframes blink {
   from, to {
     opacity: 0;
@@ -1412,6 +1515,7 @@ section.slide {
     width: 100% !important;
     height: 100% !important;
     display: block;
+    
 }
 
 #tjs {
@@ -1425,6 +1529,7 @@ section.slide {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #adadad;
+
 }
 
 @media (min-width: 1062px) {

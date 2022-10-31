@@ -41,6 +41,33 @@ var swiper = new Swiper(".swiper", {
   },
 });
 
+var hamburger_menu = document.querySelector(".menu");
+var cinema = document.querySelector(".cinematic-t");
+var cinema2 = document.querySelector(".cinematic-b");
+var container = document.querySelector(".swiper-pagination");
+hamburger_menu.addEventListener("click", () => {
+  container.classList.toggle("menu-active");
+  cinema.classList.toggle("hide-t");
+  cinema2.classList.toggle("hide-t");
+});
+
+document.body.addEventListener(
+  "click",
+  () => {
+    if (true) {
+      var manyHands = Array.from(document.querySelectorAll("#hands"));
+      manyHands.forEach((hand, i) => {
+        if (!hand.classList.contains("hide")) {
+          manyHands[0].classList.add("hide");
+          manyHands[1].classList.add("hide");
+          manyHands[2].classList.add("hide");
+        }
+      });
+    }
+  },
+  false
+);
+
 window.onload = loadSwip();
 function loadSwip() {
   var l = document.createElement("style");
@@ -183,7 +210,7 @@ span.swiper-pagination-bullet-active {
     .swiper-pagination-vertical.swiper-pagination-bullets,
     .swiper-vertical>.swiper-pagination-bullets {
         right: 0% !important;
-        top: -106% !important;
+        top: -100% !important;
         transform: translate3d(-5%, 70%, 0) !important;
         display: flex !important;
         column-gap: 35px !important;
@@ -195,7 +222,7 @@ span.swiper-pagination-bullet-active {
     div.menu,
     div.menu.active {
         transform: scale(0.25) !important;
-        top: -6% !important;
+        top: 0% !important;
         right: -5% !important;
     }
 }
@@ -279,3 +306,27 @@ path:nth-child(6) {
 `;
   document.head.appendChild(l);
 }
+
+var player = document.querySelector(".pulsating-circle");
+var music = new Audio(
+  "./images/Revolt_Production_Music_-_Dream_Or_Reality.mp3"
+);
+var isPlaying = false;
+
+function togglePlay() {
+  isPlaying ? music.pause() : music.play();
+}
+music.onplaying = function () {
+  isPlaying = true;
+};
+music.onpause = function () {
+  isPlaying = false;
+};
+player.addEventListener(
+  "click",
+  () => {
+    player.classList.toggle(".pause");
+    togglePlay();
+  },
+  false
+);

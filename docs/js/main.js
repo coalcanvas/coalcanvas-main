@@ -1,4 +1,3 @@
- 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // import * as dat from "dat.gui";
@@ -83,7 +82,7 @@ function generateSphere() {
 var app = document.querySelector("#tjs");
 ray = new THREE.Raycaster();
 scene = new THREE.Scene();
-scene.background = new THREE.Color("hsla(159, 6%, 12%, 1)");
+scene.background = new THREE.Color("hsla(0, 0%, 0%, 1)");
 camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -98,7 +97,7 @@ app.append(renderer.domElement);
 
 var controls = new OrbitControls(camera, renderer.domElement);
 
-camera.position.z = 100;
+camera.position.z = 5;
 
 //console.log(camera.position);
 controls.enableDamping = true;
@@ -121,7 +120,7 @@ var sphereGeometry = new THREE.SphereGeometry(
 );
 
 var sphereMaterial = new THREE.MeshBasicMaterial({
-  color: 0x220000,
+  color: 0x4b0082,
   opacity: 0.6,
   side: THREE.DoubleSide,
   vertexColors: true,
@@ -185,34 +184,6 @@ var frame = 0;
 //console.log(camera.position);
 
 //Listeners
-var hamburger_menu = document.querySelector(".menu");
-var cinema = document.querySelector(".cinematic-t");
-var cinema2 = document.querySelector(".cinematic-b");
-var container = document.querySelector(".swiper-pagination");
-hamburger_menu.addEventListener("click", () => {
-  container.classList.toggle("menu-active");
-  cinema.classList.toggle("hide-t");
-  cinema2.classList.toggle("hide-t");
-});
-
-document.body.addEventListener(
-  "click",
-  () => {
-    if (true) {
-      var manyHands = Array.from(document.querySelectorAll("#hands"));
-      manyHands.forEach((hand, i) => {
-        if (!hand.classList.contains("hide")) {
-          manyHands[0].classList.add("hide");
-          manyHands[1].classList.add("hide");
-          manyHands[2].classList.add("hide");
-        }
-      });
-    }
-  },
-  false
-);
-
-function hideHand() {}
 
 var btn = document.querySelector("#explore-button");
 btn.addEventListener("click", exploreBtn, false);
@@ -226,7 +197,7 @@ window.addEventListener("load", loadHandler, false);
 function loadHandler(e) {
   var target = document.querySelector("canvas");
 
-  if (document.readyState === "compvare") {
+  if (document.readyState === "complete") {
     var wheelEvent = new WheelEvent("wheel", {
       deltaY: 100,
       deltaMode: 0,
@@ -263,7 +234,7 @@ function exploreBtn(e) {
                     camera.updateMatrixWorld(); */
 
     gsap.to(camera.position, {
-      z: 15,
+      z: 500,
       ease: "power4.out",
       duration: 1.5,
     });
