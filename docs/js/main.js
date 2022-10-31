@@ -196,25 +196,6 @@ hamburger_menu.addEventListener("click", () => {
   cinema2.classList.toggle("hide-t");
 });
 
-document.body.addEventListener(
-  "click",
-  () => {
-    if (true) {
-      var manyHands = Array.from(document.querySelectorAll("#hands"));
-      manyHands.forEach((hand, i) => {
-        if (!hand.classList.contains("hide")) {
-          manyHands[0].classList.add("hide");
-          manyHands[1].classList.add("hide");
-          manyHands[2].classList.add("hide");
-        }
-      });
-    }
-  },
-  false
-);
-
-function hideHand() {}
-
 var btn = document.querySelector("#explore-button");
 btn.addEventListener("click", exploreBtn, false);
 
