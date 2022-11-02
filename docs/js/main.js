@@ -253,7 +253,7 @@ function exploreBtn(e) {
       ease: "power4.in",
       duration: 3,
       delay: 1,
-      onCompvare: () => {
+      onComplete: () => {
         window.location = "https://coalcanvas.github.io";
       },
     });
