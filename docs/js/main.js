@@ -403,7 +403,7 @@ function animate() {
   stars.rotation.x += 0.0005;
 }
 
-animate();
+animate(  renderer.render(scene, camera));
 
 //contact form
 var YOUR_PUBLIC_KEY = "OELFukrApYjYBWuwP";
