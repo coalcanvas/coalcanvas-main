@@ -96,7 +96,7 @@ app.append(renderer.domElement);
 
 var controls = new OrbitControls(camera, renderer.domElement);
 
-camera.position.z = 5;
+camera.position.z = 35;
 
 
 controls.enableDamping = true;
