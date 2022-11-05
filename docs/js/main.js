@@ -1,10 +1,16 @@
+window.onload = loadModule();
+
+function loadModule() {
+  var mod = document.createElement("script");
+  mod.setAttribute("type", "module");
+  mod.setAttribute("crossorigin", "anonymous");
+  mod.setAttribute("referrer-policy", "no-referrer");
+  mod.innerHTML = `
+
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-// import * as dat from "dat.gui";
-
 ("use strict");
 
-//THREE
 
 var scene, ray;
 var geometry, material, mesh, camera, quarter;
@@ -14,8 +20,7 @@ var windowHalf = new THREE.Vector2(
   window.innerWidth / 2,
   window.innerHeight / 2
 );
-// var gui = new dat.GUI();
-// dat.GUI.toggleHide();
+
 var world = {
   sphere: {
     radius: 15.662,
@@ -27,13 +32,7 @@ var world = {
     thetaLength: 6.283185307179586,
   },
 };
-// gui.add(world.sphere, "radius", 1, 500).onChange(generateSphere);
-// gui.add(world.sphere, "widthSegments", 1, 500).onChange(generateSphere);
-// gui.add(world.sphere, "heightSegments", 1, 100).onChange(generateSphere);
-// gui.add(world.sphere, "phiStart", 0, 1).onChange(generateSphere);
-// gui.add(world.sphere, "phiLength", 0, 6.283185).onChange(generateSphere);
-// gui.add(world.sphere, "thetaStart", 0, 6.283185).onChange(generateSphere);
-// gui.add(world.sphere, "thetaLength", 0, 6.283185).onChange(generateSphere);
+
 
 function generateSphere() {
   sphereMesh.geometry.dispose();
@@ -47,8 +46,7 @@ function generateSphere() {
     world.sphere.thetaLength
   );
 
-  // sphereMesh.quaternion.x = (1.4 * Math.PI) / 2;
-  // vertice position randomization
+
   var { array } = sphereMesh.geometry.attributes.position;
   var randomValues = [];
   for (var i = 0; i < array.length; i++) {
@@ -100,7 +98,7 @@ var controls = new OrbitControls(camera, renderer.domElement);
 
 camera.position.z = 5;
 
-//console.log(camera.position);
+
 controls.enableDamping = true;
 controls.enablePan = false;
 controls.minPolarAngle = 0.8;
@@ -129,7 +127,7 @@ var sphereMaterial = new THREE.MeshBasicMaterial({
 });
 var sphereMesh = new THREE.Mesh(sphereGeometry, sphereMaterial);
 scene.add(sphereMesh);
-//sphereMesh.rotation.y = 1.57;
+
 generateSphere();
 
 var light = new THREE.DirectionalLight(0xffffff, 1);
@@ -143,10 +141,7 @@ scene.add(backLight);
 var starGeometry = new THREE.BufferGeometry();
 var starMaterial = new THREE.PointsMaterial({
   color: 0xe5e5e5,
-  //specular: 0xffffff,
-  //shininess: 500,
-  // vertexColors: true,
-  // transparent: false,
+
 });
 
 var starVertices = [];
@@ -157,15 +152,14 @@ for (var i = 0; i < 10000; i++) {
   starVertices.push(x, y, z);
 }
 
-//console.log(starVertices);
+
 
 starGeometry.setAttribute(
   "position",
   new THREE.Float32BufferAttribute(starVertices, 3)
 );
 
-//console.log(starGeometry);
-//console.log(starMaterial);
+
 
 var stars = new THREE.Points(starGeometry, starMaterial);
 scene.add(stars);
@@ -182,9 +176,7 @@ var mouse = new THREE.Vector3({
 });
 
 var frame = 0;
-//console.log(camera.position);
 
-//Listeners
 
 var btn = document.querySelector("#explore-button");
 btn.addEventListener("click", exploreBtn, false);
@@ -229,10 +221,10 @@ function exploreBtn(e) {
   var app = document.querySelector("#app");
 
   if (target) {
-    /* camera.rotation.x += 1.57;
+
 
                     camera.position.z = 25;
-                    camera.updateMatrixWorld(); */
+                    camera.updateMatrixWorld(); 
 
     gsap.to(camera.position, {
       z: 500,
@@ -263,11 +255,9 @@ function exploreBtn(e) {
 
     app.style.opacity = 0;
     app.style.transform =
-      "rotateX(80deg) translate(0px, 0px,-`15px) scaleZ(0.5)";
+      "rotateX(80deg) translate(0px, 0px,-15px) scaleZ(0.5)";
     app.style.transition = "all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275)";
-
-    //camera.rotation.x = 1.57;
-    // camera.position.z = 25;
+ 
     console.log(camera.position);
   } else if (!target) {
     console.log("nope");
@@ -289,15 +279,11 @@ function onMouseDown(e) {
 }
 
 function onMouseWheel(e) {
-  var bod = document.querySelector("#app");
   var target = e.target;
-
-  // var canvas = document.querySelector("canvas");
-
   console.log(camera.position);
-  //console.log(bod.offsetY);
+ 
 
-  camera.position.z += e.deltaY * 0.1; // move camera along z-axis
+  camera.position.z += e.deltaY * 0.1; 
 }
 
 function onResize(e) {
@@ -403,9 +389,9 @@ function animate() {
   stars.rotation.x += 0.0005;
 }
 
-animate(  renderer.render(scene, camera));
+animate();
 
-//contact form
+
 var YOUR_PUBLIC_KEY = "OELFukrApYjYBWuwP";
 var contact_service = "service_f11zj7x";
 var contact_form = "template_zoh9myc";
@@ -420,7 +406,7 @@ window.onload = function () {
     .addEventListener("submit", function (event) {
       event.preventDefault();
       // these IDs from the previous steps
-      emailjs.sendForm(contact_service, contact_form, this).then(
+      emailjs.sendForm(contact_service, contact_form, mod).then(
         function () {
           console.log("SUCCESS!");
         },
@@ -430,3 +416,9 @@ window.onload = function () {
       );
     });
 };
+
+
+`;
+
+  document.body.appendChild(mod);
+}
