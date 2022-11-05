@@ -93,6 +93,7 @@ var renderer = new THREE.WebGLRenderer({ antialias: true });
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
+
 app.append(renderer.domElement);
 
 var controls = new OrbitControls(camera, renderer.domElement);
@@ -192,7 +193,7 @@ document.addEventListener("mousemove", onMouseMove, false);
 document.addEventListener("onmousedown", onMouseDown, false);
 document.addEventListener("wheel", onMouseWheel, false);
 window.addEventListener("resize", onResize, false);
-window.addEventListener("load", loadHandler, false);
+window.addEventListener("load", loadHandler, onResize, false);
 
 function loadHandler(e) {
   var target = document.querySelector("canvas");
@@ -253,7 +254,7 @@ function exploreBtn(e) {
       ease: "power4.in",
       duration: 3,
       delay: 1,
-      onComplete: () => {
+      onCompvare: () => {
         window.location = "https://coalcanvas.github.io";
       },
     });
@@ -303,13 +304,15 @@ function onResize(e) {
   var app = renderer.domElement;
   var width = window.innerWidth;
   var height = window.innerHeight;
+  var aspect = width / height;
   var needResize = app.width !== width || app.height !== height;
   windowHalf.set(width / 2, height / 2);
 
-  camera.aspect = app.width / app.height;
+  camera.aspect = aspect;
   camera.updateProjectionMatrix();
   if (needResize) {
     renderer.setSize(width, height);
+    renderer.setViewport(0, 0, width, height);
   }
 }
 
@@ -337,6 +340,7 @@ function animate() {
   }
 
   sphereMesh.geometry.attributes.position.needsUpdate = true;
+
   renderer.render(scene, camera);
 
   var intersects = ray.intersectObject(sphereMesh);
